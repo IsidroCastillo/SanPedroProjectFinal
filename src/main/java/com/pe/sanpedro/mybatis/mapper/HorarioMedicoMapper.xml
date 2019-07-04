@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="com.pe.sanpedro.mybatis.mapper.HorarioMedicoMapper">
+	
+	<select id="listado" resultType="com.pe.sanpedro.model.HorarioMedico">
+
+	SELECT d.descripcion as descripcion ,t.horario_inicio as horario_inicio
+	,t.horario_fin as horario_fin ,s.fecha_Fin as
+	fecha_inicio,s.fecha_Inicio as fecha_fin,t.descripcion as turno
+	FROM detallehorario dh inner join horarios h on dh.idHorarios =
+	h.idhorarios
+	inner join dia d on h.idDia = d.idDia
+	inner join turno t on h.idTurno = t.idTurno
+	inner join semana s on dh.idsemana = s.idSemana
+	inner join medico m on dh.idmedico = m.idMedico
+	where dh.idsemana=2 and dh.idmedico = 1;
+			 	
+ 	</select>
+ 	
+ 	<select id="listaMedicosxEspecialidad" resultType="com.pe.sanpedro.model.Medico">
+ 	
+ 		select idMedico as idMedico ,nombrecompleto as nombreCompleto,dni as dni,correo as correo,descripcion as especialidad,precio as precio from medico m 
+			inner join especialidad e on m.especialidad_idEspecialidad = e.idEspecialidad
+		where e.idEspecialidad = #{id};
+ 
+ 	</select>
+ 	
+ 	<select id="listadoHorario" resultType="com.pe.sanpedro.model.HorarioMedico">
+ 	SELECT d.descripcion as descripcion ,t.horario_inicio as horario_inicio
+	,t.horario_fin as horario_fin ,s.fecha_Fin as
+	fecha_inicio,s.fecha_Inicio as fecha_fin,t.descripcion as turno, fecha as fechaTurno FROM horariomedico hm
+				inner join semana s on s.idSemana = hm.idSemana
+					inner join dia d on hm.idDia = d.idDia
+						inner join turno t on hm.idTurno = t.idTurno
+								where hm.idSemana = 7 and hm.idMedico = #{idMedico};
+ 	
+ 	</select>
+ 	
+<!--  	<select id="mostraHoras" resultType="com.pe.sanpedro.model.HorarioMedico"> -->
+<!--  	SELECT d.descripcion as descripcion ,t.horario_inicio as horario_inicio -->
+<!-- 	,t.horario_fin as horario_fin ,s.fecha_Fin as -->
+<!-- 	fecha_inicio,s.fecha_Inicio as fecha_fin,t.descripcion as turno, fecha as fechaTurno FROM horariomedico hm -->
+<!-- 				inner join semana s on s.idSemana = hm.idSemana -->
+<!-- 					inner join dia d on hm.idDia = d.idDia -->
+<!-- 						inner join turno t on hm.idTurno = t.idTurno -->
+<!-- 								where hm.idMedico = #{medicoID} AND hm.fecha = #{fechaTurno}; -->
+<!--  	</select> -->
+ 	
+ 	<select id="mostraHoras" resultType="com.pe.sanpedro.model.HorarioMedico" statementType="CALLABLE" parameterType="java.util.Map">
+ 		call sp_medicoXfecha(#{id},#{fechaTur})
+	</select>
+</mapper>

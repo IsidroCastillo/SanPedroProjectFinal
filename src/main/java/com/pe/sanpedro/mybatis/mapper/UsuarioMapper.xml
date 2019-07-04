@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pe.sanpedro.mybatis.mapper.UsuarioMapper">
+
+	<select id="login" parameterType="java.util.Map"
+		resultType="Usuario">
+		select u.idUsuario as idUsuario ,u.usuario as usuario,u.contraseña as password,
+		u.estado estado,u.tipousuario_idTipoUsuario as id_tipo_usuario,p.idPaciente as idPaciente, p.nombrecompleto as nombre,p.correo as correo, p.direccion as direccion,p.fecha_nacimiento as fecha_nac, p.celular as celular
+		from usuario u inner join
+		paciente p on u.idUsuario=p.usuario_idUsuario
+		where usuario = #{user} and contraseña = #{pwd}
+	</select>
+
+	<select id="loginMedico" parameterType="java.util.Map"
+		resultType="Usuario">
+		select u.idUsuario as idUsuario ,u.usuario as usuario,u.contraseña as password,
+		u.estado estado,u.tipousuario_idTipoUsuario as id_tipo_usuario,m.idMedico as idMedico, m.nombrecompleto as nombre,m.dni as dni, m.correo as correo,esp.descripcion as especialidad,tp.descripcion as tipoUsuario
+		from usuario u inner join
+		medico m on u.idUsuario=m.usuario_idUsuario
+        inner join especialidad esp on esp.idEspecialidad = m.especialidad_idEspecialidad
+        inner join tipousuario tp on tp.idTipoUsuario = u.tipousuario_idTipoUsuario
+		where usuario = #{user} and contraseña = #{pwd}
+	</select>
+
+
+
+
+
+</mapper>
