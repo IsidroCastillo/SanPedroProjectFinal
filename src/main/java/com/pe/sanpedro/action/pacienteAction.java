@@ -9,7 +9,10 @@ public class pacienteAction extends ActionSupport {
 	private static final long serialVersionUID = 1L;
 
 	private paciente paciente;
+	private Usuario usu;
 	private String usuario,clave, estado,nombreCompleto,dni,correo,direccion,fechaNac,celular,est;
+	private String nuevaContra;
+	private int idUsuario;
 	private int idTipo;
 	private String msj;
 	private String respuesta ="";
@@ -56,13 +59,34 @@ public class pacienteAction extends ActionSupport {
 
 		boolean registro = service.actualizarEmpleado(paciente);
 		if (registro) {
-			System.out.println("Error al Actualizar");
+			System.out.println("Actualizado");
 			return ERROR;
 		} else {
-			System.out.println("Actualizado");
+			System.out.println("Error en el Actualizado");
 			return SUCCESS;
 		}
 	}
+	
+	public String actualizarContra() throws Exception {
+		usu = new Usuario();
+		usu.setPassword(clave);
+		usu.setNuevaContra(nuevaContra);
+		usu.setIdUsuario(idUsuario);
+
+		pacienteService service = new pacienteService();
+		System.out.println("Actualizando paciente");
+
+		boolean registro = service.actualizarContra(usu);
+		if (registro) {
+			System.out.println("Actualizado");
+			return ERROR;
+		} else {
+			
+			System.out.println("Error al Actualizar");
+			return SUCCESS;
+		}
+	}
+	
 
 	public paciente getPaciente() {
 		return paciente;
@@ -190,6 +214,30 @@ public class pacienteAction extends ActionSupport {
 
 	public void setIdPaciente(int idPaciente) {
 		this.idPaciente = idPaciente;
+	}
+
+	public Usuario getUsu() {
+		return usu;
+	}
+
+	public void setUsu(Usuario usu) {
+		this.usu = usu;
+	}
+
+	public String getNuevaContra() {
+		return nuevaContra;
+	}
+
+	public void setNuevaContra(String nuevaContra) {
+		this.nuevaContra = nuevaContra;
+	}
+
+	public int getIdUsuario() {
+		return idUsuario;
+	}
+
+	public void setIdUsuario(int idUsuario) {
+		this.idUsuario = idUsuario;
 	}
 	
 	

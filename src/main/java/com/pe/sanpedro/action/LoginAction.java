@@ -26,7 +26,7 @@ public class LoginAction extends ActionSupport {
 		Usuario user = service.login(usuario, password);
 
 		if (user != null) {
-			session.put("idUsu", user.getUsuario());
+			session.put("idUsu", user.getIdUsuario());
 			session.put("idPaciente", user.getIdPaciente());
 			session.put("user", user.getUsuario());
 			session.put("pass", user.getPassword());
@@ -40,7 +40,7 @@ public class LoginAction extends ActionSupport {
 			
 			Usuario user2 = service.loginMedico(usuario, password);
 			
-			session.put("idUsu", user2.getUsuario());
+			session.put("idUsu", user2.getIdUsuario());
 			session.put("idMedico", user2.getIdMedico());
 			session.put("user", user2.getUsuario());
 			session.put("pass", user2.getPassword());

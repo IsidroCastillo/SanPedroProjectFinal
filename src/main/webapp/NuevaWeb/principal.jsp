@@ -61,15 +61,15 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col">
-					<div class="button about_button ml-auto mr-auto"><a href="reservarCita.jsp"><span>Reservar Cita</span><span>reservar cita</span></a></div>
+				<div class="col" id="btnCita">
+<!-- 					<div class="button about_button ml-auto mr-auto"><a href="reservarCita.jsp"><span>Reservar Cita</span><span>reservar cita</span></a></div> -->
 				</div>
 			</div>
 		</div>
 	</div>
 	
 	<input type="hidden" id="txtIdPac" value="<s:property value="#session.idPaciente" />">
-	<input type="text" id="tipoUsuario" value="<s:property value="#session.tipoUsuario" />">
+	<input type="hidden" id="tipoUsuario" value="<s:property value="#session.tipoUsuario" />">
 	<input type="hidden" id="txtUsu" value="<s:property value="#session.user" />">
 	<input type="hidden" id="txtPas" value="<s:property value="#session.pass" />">
 	
@@ -137,6 +137,11 @@
 						
 						var output = '';
 						var tblHeader = '';
+						var btnRegistCita = '';
+						
+						
+						btnRegistCita += 
+							'<div class="button about_button ml-auto mr-auto"><a href="reservarCita.jsp"><span>Reservar Cita</span><span>reservar cita</span></a></div>';
 						
 						
 						tblHeader += 
@@ -168,6 +173,8 @@
 							
 						});
 						$('#tblListCitasPaciente thead').append(tblHeader);
+						$('#btnCita').append(btnRegistCita);
+						
 						$('#tblListCitasPaciente tbody').append(output);
 
 					},

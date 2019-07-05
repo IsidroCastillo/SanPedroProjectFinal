@@ -223,21 +223,23 @@
 				</div>
 				<br>
 				<div class="container">
-					<form action="#" label="Actualización del Producto">
+					<form label="Actualización del Producto">
 						<div class="form-group">
-							<input type="password" class="form-control" id="recipient-name"
+							<input type="password" class="form-control" id="txtPass"
 								placeholder="Contraseña actual">
 						</div>
 						<div class="form-group">
-							<input type="password" class="form-control" id="recipient-name"
+							<input type="password" class="form-control" id="txtNuevaPass"
 								placeholder="Contraseña nueva">
 						</div>
 						<div class="form-group">
-							<input type="password" class="form-control" id="recipient-name"
+							<input type="password" class="form-control" id="txtRepitPass"
 								placeholder="Repetir contraseña">
+							<input type="text" class="form-control" id="txtIdUsuario"
+								placeholder="Repetir contraseña" value="<s:property value="#session.idUsu"/>">
 						</div>
 						<div class="modal-footer">
-							<s:submit value="Actualizar" cssClass="btn btn-default btn-block" />
+							<s:submit id="btnCambiarClave" value="Actualizar" cssClass="btn btn-default btn-block" />
 						</div>
 					</form>
 				</div>
@@ -333,9 +335,58 @@
 			 
 		 }
 		 
-// 		 $('#btnActualizar').click(function(){
-// 			 alert("Hola");
-// 		 });
+		 $('#txtRepitPass').keyup(function(){
+			 var rep = $('#txtRepitPass').val();
+			 var nuevaContra = $('#txtNuevaPass').val();
+			 var TamNueva = $('#txtNuevaPass').val().length;
+			
+			 var lt = $('#txtRepitPass').val().length;
+			// alert(nuevaContra);
+			 if(lt >= TamNueva){
+				 if(rep != nuevaContra){
+					 alert("Contraseñas no coinciden!!")
+					 $('#txtRepitPass').val("");
+				 }
+			 }
+			 
+			 
+			
+			 
+		 });
+		 
+		 
+		 $('#btnCambiarClave').click(function(e){
+			 e.preventDefault();
+			 
+			 var clave = $('#txtPass').val();
+			 var nuevaContra = $('#txtNuevaPass').val();
+			 var idUsuario = $('#txtIdUsuario').val();
+			 
+				$.ajax({			
+					type:"POST",
+					url:"actualizarPass.action",
+					data : "clave=" + clave + "&nuevaContra=" + nuevaContra + "&idUsuario=" + idUsuario,
+					success: function(result){
+						
+						swal({
+				              title: "Actualizado Completado!",
+				              text: "Se actualizo su nueva Contraseña!",
+				              icon: "success",
+				              button: "Listo!",
+				              
+				            }).then((value) => {
+				                 location.href = 'principal.jsp'; 
+				            });
+						
+					},
+					error: function(result){
+						alert("Some error occured.");
+					}
+				});
+			 
+			 
+			 
+		 });
 		 
 
 	 });

@@ -22,6 +22,14 @@
 			<result name="success" type="json"></result>
 			<result name="error" type="json"></result>
 		</action>
+		<action name="actualizarPass"
+			class="com.pe.sanpedro.action.pacienteAction"
+			method="actualizarContra">
+			<result name="success" type="json"></result>
+			<result name="error" type="json"></result>
+		</action>
+		
+		
 		
 		<action name="login" class="com.pe.sanpedro.action.LoginAction"
 			method="validar">

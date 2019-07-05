@@ -102,7 +102,7 @@
 		
 		<div class="col-lg-4 mx-auto">
 			<div class="info_form_container">
-			<a href="listando" class="text-center">Horario</a>
+			
 				<div class="info_form_title text-center">Bienvenido</div>
 				<form action="login" class="info_form" id="info_form" method="post">
 					<input type="text" name="usuario" class="info_input"

@@ -1,6 +1,7 @@
 <%@taglib uri="/struts-bootstrap-tags" prefix="sb"%>
 <%@taglib uri="/struts-jquery-tags" prefix="sj"%>
 <%@taglib uri="/struts-tags" prefix="s"%>
+<%@include file="/template/header.jsp" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -44,7 +45,7 @@
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<%@include file="/template/header.jsp" %>
+
 <!-- 	<header class="header" id="header"> -->
 <!-- 	<div> -->
 <!-- 		<div class="header_top"> -->
