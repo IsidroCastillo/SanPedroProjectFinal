@@ -7,8 +7,11 @@ import java.util.Date;
 import java.util.List;
 
 import com.pe.sanpedro.model.HorarioMedico;
+import com.pe.sanpedro.model.Usuario;
+import com.pe.sanpedro.model.paciente;
 import com.pe.sanpedro.service.EspecialidadService;
 import com.pe.sanpedro.service.HorarioMedicoService;
+import com.pe.sanpedro.service.pacienteService;
 
 public class listar {
 	
@@ -21,23 +24,43 @@ public class listar {
 	public static void main(String[] args) throws Exception {
 		//listar2();
 		
-		int idMedico = 1;
-		List<HorarioMedico> lst = new ArrayList<>();
-		HorarioMedicoService ser = new HorarioMedicoService();
-		lst = ser.listadoHorario(idMedico);
+		pacienteService s = new pacienteService();
 		
-		for (HorarioMedico horarioMedico : lst) {
-			Date objDate = new Date(); // Sistema actual La fecha y la hora se asignan a objDate 
-			 objDate = horarioMedico.getFechaTurno();
-			System.out.println(objDate); 
-	        String strDateFormat = "dd-MMM-YY"; // El formato de fecha está especificado  
-	        SimpleDateFormat objSDF = new SimpleDateFormat(strDateFormat); // La cadena de formato de fecha se pasa como un argumento al objeto 
-	       System.out.println(objSDF.format(objDate));
-	       
-			
-			
-			System.out.println(horarioMedico.getFechaTurno());
-		}
+//		paciente p = new paciente();
+//		p.setCelular("123456789");
+//		p.setCorreo("asd@gmail.com");
+//		p.setDireccion("trujillo");
+//		p.setIdPaciente(1);
+//		//int idPaciente = 1;
+//		String contra ="jordy";
+//		String nueva="sad";
+//		int id =2;
+		Usuario usu = new Usuario();
+		usu.setPassword("jordy");
+		usu.setNuevaContra("123456");
+		usu.setIdUsuario(2);
+		
+		
+		s.actualizarContra(usu);
+		
+		
+//		int idMedico = 1;
+//		List<HorarioMedico> lst = new ArrayList<>();
+//		HorarioMedicoService ser = new HorarioMedicoService();
+//		lst = ser.listadoHorario(idMedico);
+//		
+//		for (HorarioMedico horarioMedico : lst) {
+//			Date objDate = new Date(); // Sistema actual La fecha y la hora se asignan a objDate 
+//			 objDate = horarioMedico.getFechaTurno();
+//			System.out.println(objDate); 
+//	        String strDateFormat = "dd-MMM-YY"; // El formato de fecha está especificado  
+//	        SimpleDateFormat objSDF = new SimpleDateFormat(strDateFormat); // La cadena de formato de fecha se pasa como un argumento al objeto 
+//	       System.out.println(objSDF.format(objDate));
+//	       
+//			
+//			
+//			System.out.println(horarioMedico.getFechaTurno());
+//		}
 		
 //		Date fecha = new Date();
 //		String strDateFormat = "dd-MMM-YY hh:mm:ss"; // El formato de fecha está especificado  

@@ -31,6 +31,7 @@ public class CitaAction extends ActionSupport {
 	private String usu,pass;
 	
 	private List<cita> listaCitas;
+	private List<cita> lstCitasPacientes;
 	
 	public String registrarCita() {
 		
@@ -76,9 +77,33 @@ public class CitaAction extends ActionSupport {
 			return SUCCESS;
 		}
 	}
+	
+	public String listarCitasPacientes() {
+		CitaService servicio = new CitaService();
+
+		lstCitasPacientes = servicio.listarCitasPacientes(idPaciente);
+
+
+		if (lstCitasPacientes == null) {
+			addActionError("Listado Vacío");
+			return ERROR;
+		} else {
+			return SUCCESS;
+		}
+	}
 
 	
 	
+	public List<cita> getLstCitasPacientes() {
+		return lstCitasPacientes;
+	}
+
+
+	public void setLstCitasPacientes(List<cita> lstCitasPacientes) {
+		this.lstCitasPacientes = lstCitasPacientes;
+	}
+
+
 	public int getIdCita() {
 		return idCita;
 	}

@@ -15,7 +15,14 @@
 			<result name="exito">/NuevaWeb/login.jsp</result>
 			<result name="error">/error.jsp</result>
 		</action>
-
+		
+			<action name="actualizarPac"
+			class="com.pe.sanpedro.action.pacienteAction"
+			method="actualizar">
+			<result name="success" type="json"></result>
+			<result name="error" type="json"></result>
+		</action>
+		
 		<action name="login" class="com.pe.sanpedro.action.LoginAction"
 			method="validar">
 			<result name="success">/NuevaWeb/principal.jsp</result>
@@ -23,8 +30,8 @@
 		</action>
 		<action name="logout"
 			class="com.pe.sanpedro.action.LoginAction" method="logout">
-			<result name="success">/login.jsp</result>
-			<result name="error">/error.jsp</result>
+			<result name="success">/NuevaWeb/login.jsp</result>
+			<result name="error">/NuevaWeb/error.jsp</result>
 		</action>
 		<action name="horarioMedico"
 			class="com.pe.sanpedro.action.HorarioAction" method="listarHorario">
@@ -50,6 +57,13 @@
 			<result name="success" type="json"></result>
 			<result name="error" type="json" ></result>
 		</action>
+		
+		<action name="listarCitasPacientes" class="com.pe.sanpedro.action.CitaAction" method="listarCitasPacientes">
+			<result name="success" type="json"></result>
+			<result name="error" type="json" ></result>
+		</action>
+		
+	
 		
 	</package>
 

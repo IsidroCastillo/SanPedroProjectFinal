@@ -13,13 +13,14 @@ public class pacienteAction extends ActionSupport {
 	private int idTipo;
 	private String msj;
 	private String respuesta ="";
-	
+	private int idPaciente;
 
 	
 	public String registrarPaciente() {
 		
 		try {
-					
+
+			
 			pacienteService ps = new pacienteService();
 			int registro = ps.registrarPaciente(dni,clave, "H", 2,nombreCompleto,dni,correo,direccion,fechaNac,celular,"H");
 					
@@ -42,6 +43,25 @@ public class pacienteAction extends ActionSupport {
 				
 				return respuesta;
 		
+	}
+	
+	public String actualizar() throws Exception {
+		paciente = new paciente();
+		paciente.setCorreo(correo);
+		paciente.setDireccion(direccion);
+		paciente.setCelular(celular);
+		paciente.setIdPaciente(idPaciente);
+		pacienteService service = new pacienteService();
+		System.out.println("Actualizando paciente");
+
+		boolean registro = service.actualizarEmpleado(paciente);
+		if (registro) {
+			System.out.println("Error al Actualizar");
+			return ERROR;
+		} else {
+			System.out.println("Actualizado");
+			return SUCCESS;
+		}
 	}
 
 	public paciente getPaciente() {
@@ -162,6 +182,14 @@ public class pacienteAction extends ActionSupport {
 
 	public void setIdTipo(int idTipo) {
 		this.idTipo = idTipo;
+	}
+
+	public int getIdPaciente() {
+		return idPaciente;
+	}
+
+	public void setIdPaciente(int idPaciente) {
+		this.idPaciente = idPaciente;
 	}
 	
 	

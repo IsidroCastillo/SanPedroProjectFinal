@@ -5,6 +5,7 @@ public class Usuario {
 	private int idUsuario;
 	private String usuario;
 	private String password;
+	private String nuevaContra;
 	private String estado;
 	private int id_tipo_usuario;
 	private int idPaciente;
@@ -18,6 +19,13 @@ public class Usuario {
 	private String tipoUsuario;
 	
 	
+	
+	public String getNuevaContra() {
+		return nuevaContra;
+	}
+	public void setNuevaContra(String nuevaContra) {
+		this.nuevaContra = nuevaContra;
+	}
 	public int getIdPaciente() {
 		return idPaciente;
 	}

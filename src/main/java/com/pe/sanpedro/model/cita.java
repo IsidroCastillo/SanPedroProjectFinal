@@ -12,6 +12,23 @@ public class cita {
 	private String motivo;
 	private String hora;
 	
+	private String medico;
+	private String descripcion;
+	
+	
+	
+	public String getMedico() {
+		return medico;
+	}
+	public void setMedico(String medico) {
+		this.medico = medico;
+	}
+	public String getDescripcion() {
+		return descripcion;
+	}
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
 	private String nombrecompleto;
 	private String fecha;
 	

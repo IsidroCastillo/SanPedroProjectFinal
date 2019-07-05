@@ -10,5 +10,7 @@ public interface CitaMapper {
 	public int registrar(HashMap<Object, Object>params) throws Exception;
 	
 	public List<cita> listaCitas(HashMap<Object, Object>params)throws Exception;
+	
+	public List<cita> listaCitasPacientes(HashMap<Object, Object>params)throws Exception;
 
 }

@@ -56,5 +56,24 @@ public class CitaService {
 		return lista;
 	}
 	
+	public List<cita> listarCitasPacientes(int id) {
+		SqlSession session = MyBatisUtil.getSqlSessionFactory().openSession();
+		List<cita> lista = null;
+
+		try {
+			CitaMapper cm = session.getMapper(CitaMapper.class);
+			HashMap<Object, Object> parameters = new HashMap<>();
+			parameters.put("id", id);
+		
+
+			lista = cm.listaCitasPacientes(parameters);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			session.close();
+		}
+		return lista;
+	}
+	
 	
 }

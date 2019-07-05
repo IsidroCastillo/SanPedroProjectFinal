@@ -12,5 +12,15 @@
  	
  	</insert>
  	
+ 	<update id="actualizar" statementType="CALLABLE" parameterType="java.util.Map">
+ 		call sp_actualizarPaciente(#{correo},#{direccion},#{celular},#{idPaciente})
+ 	</update>
+ 	
+ 	<update id="actualizarContra" statementType="CALLABLE" parameterType="java.util.Map">
+ 		call sp_actualizarContra(#{contra},#{nuevaContra},#{id})
+ 	</update>
+ 	
+ 	
+ 	
  	
  </mapper>

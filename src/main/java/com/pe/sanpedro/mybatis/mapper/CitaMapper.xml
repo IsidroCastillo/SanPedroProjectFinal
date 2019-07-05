@@ -16,6 +16,10 @@
  	<select id="listaCitas" resultType="com.pe.sanpedro.model.cita" statementType="CALLABLE" parameterType="java.util.Map">
  		call sp_listaCitas(#{usu},#{pass})
 	</select>
+	
+	<select id="listaCitasPacientes" resultType="com.pe.sanpedro.model.cita" statementType="CALLABLE" parameterType="java.util.Map">
+ 		call sp_listaCitasPaciente(#{id})
+	</select>
  	
  	
  	
