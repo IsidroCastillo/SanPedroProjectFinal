@@ -70,13 +70,13 @@
 				</div>
 
 				<ul>
-					<li class="menu_item"><a href="index.html">Inicio</a></li>
+					<li class="menu_item"><a href="inicio.jsp">Inicio</a></li>
 					<li class="menu_item"><a href="#">La Clínica</a></li>
 					<li class="menu_item"><a href="#">Citas en Linea</a></li>
-					<li class="menu_item"><a href="news.html">Servicios</a></li>
-					<li class="menu_item"><a href="contact.html">Contacto</a></li>
+					<li class="menu_item"><a href="#">Servicios</a></li>
+					<li class="menu_item"><a href="#">Contacto</a></li>
 					<li class="menu_item"><a href="login.jsp">Pide tu Cita</a></li>
-					<li><a href="" class="reserva text-uppercase">
+					<li><a href="" class="reserva text-uppercase ">
 					 	<i class="fa fa-user" aria-hidden="true"></i>
 					  	<s:property value="#session.nombre" />
 					  	</a>
@@ -109,7 +109,7 @@
 							<div
 								class="header_top_content d-flex flex-row align-items-center justify-content-start">
 								<div class="logo">
-									<a href="#">health<span>+</span></a>
+									<a href="#">San Pedro<span>+</span></a>
 								</div>
 								<div
 									class="header_top_extra d-flex flex-row align-items-center justify-content-start ml-auto">
@@ -150,8 +150,8 @@
 										</nav>
 										<div
 											class="search_content d-flex flex-row align-items-center
-														 justify-content-start ml-auto">
-											<ul>
+														 justify-content-center ml-auto">
+											<ul class="d-flex flex-row align-items-center justify-content-start">
 											<li>
 												<div class="dropdown">
 													<a data-toggle="dropdown" aria-haspopup="true"
@@ -235,7 +235,7 @@
 						<div class="form-group">
 							<input type="password" class="form-control" id="txtRepitPass"
 								placeholder="Repetir contraseña">
-							<input type="text" class="form-control" id="txtIdUsuario"
+							<input type="hidden" class="form-control" id="txtIdUsuario"
 								placeholder="Repetir contraseña" value="<s:property value="#session.idUsu"/>">
 						</div>
 						<div class="modal-footer">
@@ -260,7 +260,6 @@
 		 if(tipoUsuario =="Medico"){
 			 output += 
 				'<li class="active"><a href="principal.jsp">Inicio</a></li>' +
-				'<li><a href="citasMedicas.jsp">Citas</a></li>'+
 				'<li><a href="horarioMedico.jsp">Horario</a></li>';
 				
 			 model += 
@@ -272,7 +271,7 @@
 					'<div class="form-group"><input type="text" name="paciente.direccion" class="form-control" placeholder="Dirección" value="<s:property value="#session.dni" />"></div>'+
 					'<div class="form-group"><input id="fechaNacimiento" type="text" name="paciente.fecha_nacimiento" class="form-control" placeholder="Fecha Nacimiento" value="<s:property value="#session.especialidad" />"></div>'+
 					
-					'<div class="modal-footer"><button type="button" id="btnActualizarM" onClick="actualizar();" class="btn btn-info">Actualizar</<button</div>';
+					'<div class="modal-footer"><button type="button" id="btnActualizarM" onClick="actualizar();" class="btn btn-default btn-block">Actualizar</<button</div>';
 			 
 
 		 }else {
@@ -295,7 +294,7 @@
 					'<div class="form-group"><input type="text" id="txtDireccion" class="form-control" placeholder="Dirección" value="<s:property value="#session.direccion" />"></div>'+
 					'<div class="form-group"><input id="fechaNacimiento" disabled="disabled" type="text" name="paciente.fecha_nacimiento" class="form-control" placeholder="Fecha Nacimiento" value="<s:property value="#session.fechaNac" />"></div>'+
 					'<div class="form-group"><input type="text" id="txtCel" class="form-control" placeholder="Celular" value="<s:property value="#session.cel" />"></div>' +
-					'<div class="modal-footer"><button type="button" id="btnActualizarP" onClick="actualizarP();" class="btn btn-info">Actualizar</<button</div>';
+					'<div class="modal-footer"><button type="button" id="btnActualizarP" onClick="actualizarP();" class="btn btn-default btn-block">Actualizar</<button</div>';
 					
 		 }
 			

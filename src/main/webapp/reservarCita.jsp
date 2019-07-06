@@ -46,75 +46,6 @@
 </head>
 <body>
 
-<!-- 	<header class="header" id="header"> -->
-<!-- 	<div> -->
-<!-- 		<div class="header_top"> -->
-<!-- 			<div class="container"> -->
-<!-- 				<div class="row"> -->
-<!-- 					<div class="col"> -->
-<!-- 						<div -->
-<!-- 							class="header_top_content d-flex flex-row align-items-center justify-content-start"> -->
-<!-- 							<div class="logo"> -->
-<%-- 								<a href="#">health<span>+</span></a> --%>
-<!-- 							</div> -->
-<!-- 							<div -->
-<!-- 								class="header_top_extra d-flex flex-row align-items-center justify-content-start ml-auto"> -->
-<!-- 								<div class="header_top_nav"> -->
-<!-- 									<ul -->
-<!-- 										class="d-flex flex-row align-items-center justify-content-start"> -->
-<!-- 										<li><a href="#">Factura Electrónica</a></li> -->
-<!-- 										<li><a href="#">Servicios de Emergencia</a></li> -->
-<!-- 										<li><a href="#">Web Médica</a></li> -->
-<!-- 									</ul> -->
-<!-- 								</div> -->
-<!-- 								<div class="header_top_phone"> -->
-<%-- 									<i class="fa fa-phone" aria-hidden="true"></i> <span>+34 --%>
-<%-- 										586 778 8892</span> --%>
-<!-- 								</div> -->
-<!-- 							</div> -->
-<!-- 							<div class="hamburger ml-auto"> -->
-<!-- 								<i class="fa fa-bars" aria-hidden="true"></i> -->
-<!-- 							</div> -->
-<!-- 						</div> -->
-<!-- 					</div> -->
-<!-- 				</div> -->
-<!-- 			</div> -->
-<!-- 		</div> -->
-<!-- 		<div class="header_nav" id="header_nav_pin"> -->
-<!-- 			<div class="header_nav_inner"> -->
-<!-- 				<div class="header_nav_container"> -->
-<!-- 					<div class="container"> -->
-<!-- 						<div class="row"> -->
-<!-- 							<div class="col"> -->
-<!-- 								<div -->
-<!-- 									class="header_nav_content d-flex flex-row align-items-center justify-content-start"> -->
-<!-- 									<nav class="main_nav"> -->
-<!-- 									<ul -->
-<!-- 										class="d-flex flex-row align-items-center justify-content-start"> -->
-<!-- 										<li class="active"><a href="index.html">Inicio</a></li> -->
-<!-- 										<li><a href="about.html">Tarjeta Salud San Pedro</a></li> -->
-<!-- 										<li><a href="reservarCita.jsp">Reservar Cita</a></li> -->
-<!-- 										<li><a href="news.html">Contactanos</a></li> -->
-<!-- 										<li><a href="contact.html">Mis Resultados</a></li> -->
-<!-- 									</ul> -->
-<!-- 									</nav> -->
-<!-- 									<div -->
-<!-- 										class="search_content d-flex flex-row align-items-center -->
-<!-- 														 justify-content-end ml-auto"> -->
-<!-- 										<ul> -->
-<!-- 											<li><a href="reservarCita.jsp" -->
-<%-- 												class="reserva text-uppercase"><s:property value="#session.nombre" /></a></li> --%>
-<!-- 										</ul> -->
-<!-- 									</div> -->
-<!-- 								</div> -->
-<!-- 							</div> -->
-<!-- 						</div> -->
-<!-- 					</div> -->
-<!-- 				</div> -->
-<!-- 			</div> -->
-<!-- 		</div> -->
-<!-- 	</div> -->
-<!-- 	</header> -->
 	<!-- 	WIZARD -->
 	<br>
 	<br>
@@ -155,14 +86,6 @@
 
 						<fieldset>
 							<h4>Tell us who you are:</h4>
-<!-- 							<div class="form-group"> -->
-<%-- 								<sj:select class="info_form_dep info_input info_select" --%>
-<%-- 									id="idMantEspecialidad" href="listarEsp.action" --%>
-<%-- 									label="Especialidad" name="cita.idEspecialidad" --%>
-<%-- 									list="lstEspecialidades" listKey="id" listValue="descripcion" --%>
-<%-- 									headerKey="-1" headerValue="Seleccionar Especialidad"> --%>
-<%-- 								</sj:select> --%>
-<!-- 							</div> -->
 
 							   <div class="form-group">
                                <select class="form-control" id="especialidad" style="height: 34px;">
@@ -492,7 +415,8 @@
 						$('#txFecha').val(fecha);
 						$('#txMotivo').val(motivo);
 						$('#txtEspecialidad').val(espec);
-						swal ( "¡ Buen trabajo! "+fecha , " Has hecho clic en el botón " , " success " )   ;
+						swal ( "¡ Buen trabajo! "+fecha , " Has hecho clic en el botón " , "success" )   ;
+						
 						
 					};
 					

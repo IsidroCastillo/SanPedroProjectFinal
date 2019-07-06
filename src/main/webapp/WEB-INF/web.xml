@@ -6,7 +6,7 @@
 	<display-name>SanPedroProject</display-name>
 	
 	<welcome-file-list>
-		<welcome-file>login.jsp</welcome-file>
+		<welcome-file>inicio.jsp</welcome-file>
 	</welcome-file-list>
 
 	<filter>

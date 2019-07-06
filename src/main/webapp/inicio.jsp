@@ -53,11 +53,11 @@
 				</div>
 				
 				<ul>
-					<li class="menu_item"><a href="index.html">Inicio</a></li>
+					<li class="menu_item"><a href="inicio.jsp">Inicio</a></li>
 					<li class="menu_item"><a href="#">La Clínica</a></li>
 					<li class="menu_item"><a href="#">Citas en Linea</a></li>
-					<li class="menu_item"><a href="news.html">Servicios</a></li>
-					<li class="menu_item"><a href="contact.html">Contacto</a></li>
+					<li class="menu_item"><a href="#">Servicios</a></li>
+					<li class="menu_item"><a href="#">Contacto</a></li>
 					<li class="menu_item"><a href="login.jsp">Pide tu Cita</a></li>
 				</ul>
 			</div>
@@ -96,7 +96,7 @@
 								<div
 									class="header_top_content d-flex flex-row align-items-center justify-content-start">
 									<div class="logo">
-										<a href="#">health<span>+</span></a>
+										<a href="#">San Pedro<span>+</span></a>
 									</div>
 									<div
 										class="header_top_extra d-flex flex-row align-items-center justify-content-start ml-auto">
@@ -132,8 +132,8 @@
 											<nav class="main_nav">
 											<ul
 												class="d-flex flex-row align-items-center justify-content-start">
-												<li class="active"><a href="index.html">Inicio</a></li>
-												<li><a href="about.html">La Clínica </a></li>
+												<li class="active"><a href="inicio.jsp">Inicio</a></li>
+												<li><a href="about.jsp">La Clínica </a></li>
 												<li><a href="services.html">Citas en Línea</a></li>
 												<li><a href="news.html">Servicios</a></li>
 												<li><a href="contact.html">Contacto</a></li>
@@ -160,14 +160,13 @@
 					<div class="row">
 						<div class="col">
 							<div class="home_content">
-								<div class="home_title">Medical Services that you can
-									trust</div>
+								<div class="home_title">Servicios médicos que puedas confiar</div>
 								<div class="home_text">Lorem ipsum dolor sit amet,
 									consectetur adipiscing elit. Donec malesuada lorem maximus
 									mauris scelerisque, at rutrum nulla dictum. Ut ac ligula
 									sapien.</div>
 								<div class="button home_button">
-									<a href="#"><span>read more</span><span>read more</span></a>
+									<a href="#"><span>Leer más</span><span>Leer más</span></a>
 								</div>
 							</div>
 						</div>
@@ -189,12 +188,12 @@
 								<img src="images/info_1.jpg" alt="">
 							</div>
 							<div class="info_content">
-								<div class="info_title">Free Consultations</div>
+								<div class="info_title">Consulta gratuita</div>
 								<div class="info_text">Arcu neque, scelerisque eget ligula
 									ac, congue tempor felis. Integer tempor, eros a egestas
 									finibus, dolor risus mollis.</div>
 								<div class="button info_button">
-									<a href="#"><span>read more</span><span>read more</span></a>
+									<a href="#"><span>Leer más</span><span>Leer más</span></a>
 								</div>
 							</div>
 						</div>
@@ -207,12 +206,12 @@
 								<img src="images/info_2.jpg" alt="">
 							</div>
 							<div class="info_content">
-								<div class="info_title">Emergency Care</div>
+								<div class="info_title">Consulta gratuita</div>
 								<div class="info_text">Morbi arcu neque, scelerisque eget
 									ligula ac, congue tempor felis. Integer tempor, eros a egestas
 									finibus, dolor risus.</div>
 								<div class="button info_button">
-									<a href="#"><span>read more</span><span>read more</span></a>
+									<a href="#"><span>Leer más</span><span>Leer más</span></a>
 								</div>
 							</div>
 						</div>
@@ -221,22 +220,22 @@
 					<!-- Info Form -->
 					<div class="col-lg-4 info_box_col">
 						<div class="info_form_container">
-							<div class="info_form_title">Make an Appointment</div>
+							<div class="info_form_title">Reservar ahora</div>
 							<form action="#" class="info_form" id="info_form">
 								<select name="info_form_dep" id="info_form_dep"
 									class="info_form_dep info_input info_select">
-									<option>Department</option>
-									<option>Department</option>
-									<option>Department</option>
+									<option>Departmento</option>
+									<option>Lambayeque</option>
+									<option>La Libertad</option>
 								</select> <select name="info_form_doc" id="info_form_doc"
 									class="info_form_doc info_input info_select">
 									<option>Doctor</option>
-									<option>Doctor</option>
-									<option>Doctor</option>
+									<option>Isidro</option>
+									<option>Cristian</option>
 								</select> <input type="text" class="info_input" placeholder="Name"
 									required="required"> <input type="text"
 									class="info_input" placeholder="Phone No">
-								<button class="info_form_button">make an appointment</button>
+								<button class="info_form_button">Reservar</button>
 							</form>
 						</div>
 					</div>
@@ -256,14 +255,13 @@
 						<div
 							class="cta_container d-flex flex-xl-row flex-column align-items-xl-start align-items-center justify-content-xl-start justify-content-center">
 							<div class="cta_content text-xl-left text-center">
-								<div class="cta_title">Make an appointment with one of our
-									professional Doctors.</div>
+								<div class="cta_title">Haga una cita con uno de nuestros Doctores profesionales.</div>
 								<div class="cta_subtitle">Morbi arcu neque, scelerisque
 									eget ligula ac, congue tempor felis. Integer tempor, eros a
 									egestas.</div>
 							</div>
 							<div class="button cta_button ml-xl-auto">
-								<a href="#"><span>call now</span><span>call now</span></a>
+								<a href="#"><span>Llama ahora </span><span>Llama ya!</span></a>
 							</div>
 						</div>
 					</div>
@@ -277,8 +275,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col text-center">
-						<div class="section_title">Our Services</div>
-						<div class="section_subtitle">to choose from</div>
+						<div class="section_title">Nuestros Servicios</div>
+						<div class="section_subtitle">Para escoger de</div>
 					</div>
 				</div>
 				<div class="row icon_boxes_row">
@@ -291,7 +289,7 @@
 								<div class="icon_box_icon">
 									<img src="images/icon_1.svg" alt="">
 								</div>
-								<div class="icon_box_title">Cardiology</div>
+								<div class="icon_box_title">Cardiólogo</div>
 							</div>
 							<div class="icon_box_text">Lorem ipsum dolor sit amet,
 								consectetur adipiscing elit. Donec lorem maximus malesuada lorem
@@ -307,7 +305,7 @@
 								<div class="icon_box_icon">
 									<img src="images/icon_2.svg" alt="">
 								</div>
-								<div class="icon_box_title">Gastroenterology</div>
+								<div class="icon_box_title">Gastroenterología</div>
 							</div>
 							<div class="icon_box_text">Lorem ipsum dolor sit amet,
 								consectetur adipiscing elit. Donec lorem maximus malesuada lorem
@@ -323,7 +321,7 @@
 								<div class="icon_box_icon">
 									<img src="images/icon_3.svg" alt="">
 								</div>
-								<div class="icon_box_title">Medical Lab</div>
+								<div class="icon_box_title">Laboratorio clínico</div>
 							</div>
 							<div class="icon_box_text">Lorem ipsum dolor sit amet,
 								consectetur adipiscing elit. Donec lorem maximus malesuada lorem
@@ -339,7 +337,7 @@
 								<div class="icon_box_icon">
 									<img src="images/icon_4.svg" alt="">
 								</div>
-								<div class="icon_box_title">Dental Care</div>
+								<div class="icon_box_title">Cuidado dental</div>
 							</div>
 							<div class="icon_box_text">Lorem ipsum dolor sit amet,
 								consectetur adipiscing elit. Donec lorem maximus malesuada lorem
@@ -355,7 +353,7 @@
 								<div class="icon_box_icon">
 									<img src="images/icon_5.svg" alt="">
 								</div>
-								<div class="icon_box_title">Surgery</div>
+								<div class="icon_box_title">Cirugía</div>
 							</div>
 							<div class="icon_box_text">Lorem ipsum dolor sit amet,
 								consectetur adipiscing elit. Donec lorem maximus malesuada lorem
@@ -371,7 +369,7 @@
 								<div class="icon_box_icon">
 									<img src="images/icon_6.svg" alt="">
 								</div>
-								<div class="icon_box_title">Neurology</div>
+								<div class="icon_box_title">Neurología</div>
 							</div>
 							<div class="icon_box_text">Lorem ipsum dolor sit amet,
 								consectetur adipiscing elit. Donec lorem maximus malesuada lorem
@@ -383,7 +381,7 @@
 				<div class="row">
 					<div class="col">
 						<div class="button services_button ml-auto mr-auto">
-							<a href="#"><span>read more</span><span>read more</span></a>
+							<a href="#"><span>Leer más</span><span>Leer más</span></a>
 						</div>
 					</div>
 				</div>
@@ -396,8 +394,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col text-center">
-						<div class="section_title">Our Departments</div>
-						<div class="section_subtitle">to choose from</div>
+						<div class="section_title">Nuestros departamentos</div>
+						<div class="section_subtitle">Para escoger de</div>
 					</div>
 				</div>
 				<div class="row dept_row">
@@ -414,9 +412,9 @@
 											<img src="images/dept_1.jpg" alt="">
 										</div>
 										<div class="dept_content">
-											<div class="dept_title">Neonatology</div>
+											<div class="dept_title">Neonatología</div>
 											<div class="dept_link">
-												<a href="#">Read More</a>
+												<a href="#">Leer más</a>
 											</div>
 										</div>
 									</div>
@@ -427,9 +425,9 @@
 											<img src="images/dept_2.jpg" alt="">
 										</div>
 										<div class="dept_content">
-											<div class="dept_title">Dentistry</div>
+											<div class="dept_title">Odontología</div>
 											<div class="dept_link">
-												<a href="#">Read More</a>
+												<a href="#">Leer más</a>
 											</div>
 										</div>
 									</div>
@@ -440,9 +438,9 @@
 											<img src="images/dept_3.jpg" alt="">
 										</div>
 										<div class="dept_content">
-											<div class="dept_title">Orthopedics</div>
+											<div class="dept_title">Ortopedía</div>
 											<div class="dept_link">
-												<a href="#">Read More</a>
+												<a href="#">Leer más</a>
 											</div>
 										</div>
 									</div>
@@ -453,9 +451,9 @@
 											<img src="images/dept_4.jpg" alt="">
 										</div>
 										<div class="dept_content">
-											<div class="dept_title">Laboratory</div>
+											<div class="dept_title">Laboratorio</div>
 											<div class="dept_link">
-												<a href="#">Read More</a>
+												<a href="#">Leer más</a>
 											</div>
 										</div>
 									</div>
@@ -542,8 +540,8 @@
 					<!-- Latest News -->
 					<div class="col-lg-5">
 						<div class="news">
-							<div class="news_title">Latest News</div>
-							<div class="news_subtitle">read all about it</div>
+							<div class="news_title">Últimas noticias</div>
+							<div class="news_subtitle">Lee todos los detalles</div>
 							<div class="news_container">
 
 								<!-- Latest News Post -->
@@ -556,17 +554,17 @@
 									</div>
 									<div class="latest_content">
 										<div class="latest_title">
-											<a href="news.html">A simple blog post</a>
+											<a href="news.html">Una simple entrada de blog</a>
 										</div>
 										<div class="latest_info">
 											<ul
 												class="d-flex flex-row align-items-start justify-content-start">
-												<li><a href="#">by Jane Smith</a></li>
+												<li><a href="#">Por Jane Smith</a></li>
 												<li><a href="#">April 25, 2018</a></li>
 											</ul>
 										</div>
 										<div class="latest_comments">
-											<a href="#">2 Comments</a>
+											<a href="#">2 Comentarios</a>
 										</div>
 									</div>
 								</div>
@@ -581,17 +579,17 @@
 									</div>
 									<div class="latest_content">
 										<div class="latest_title">
-											<a href="news.html">A new way to see things in medicine</a>
+											<a href="news.html">Una nueva forma de ver las cosas en medicina</a>
 										</div>
 										<div class="latest_info">
 											<ul
 												class="d-flex flex-row align-items-start justify-content-start">
-												<li><a href="#">by Jane Smith</a></li>
+												<li><a href="#">Por Jane Smith</a></li>
 												<li><a href="#">April 25, 2018</a></li>
 											</ul>
 										</div>
 										<div class="latest_comments">
-											<a href="#">2 Comments</a>
+											<a href="#">2 Comentarios</a>
 										</div>
 									</div>
 								</div>
@@ -606,17 +604,17 @@
 									</div>
 									<div class="latest_content">
 										<div class="latest_title">
-											<a href="news.html">Why is Pharma industry so big?</a>
+											<a href="news.html">¿Por qué la industria farmacéutica es tan grande?</a>
 										</div>
 										<div class="latest_info">
 											<ul
 												class="d-flex flex-row align-items-start justify-content-start">
-												<li><a href="#">by Jane Smith</a></li>
+												<li><a href="#">Por Jane Smith</a></li>
 												<li><a href="#">April 25, 2018</a></li>
 											</ul>
 										</div>
 										<div class="latest_comments">
-											<a href="#">2 Comments</a>
+											<a href="#">2 Comentarios</a>
 										</div>
 									</div>
 								</div>
@@ -643,7 +641,7 @@
 					<div class="col-lg-3 footer_col">
 						<div class="footer_about">
 							<div class="logo">
-								<a href="#">health<span>+</span></a>
+								<a href="#">San Pedro<span>+</span></a>
 							</div>
 							<div class="footer_about_text">Lorem ipsum dolor sit amet,
 								lorem maximus consectetur adipiscing elit. Donec malesuada lorem
@@ -682,7 +680,7 @@
 					<!-- Footer Contact -->
 					<div class="col-lg-5 footer_col">
 						<div class="footer_contact">
-							<div class="footer_contact_title">Quick Contact</div>
+							<div class="footer_contact_title">Contacto rápido</div>
 							<div class="footer_contact_form_container">
 								<form action="#" class="footer_contact_form"
 									id="footer_contact_form">
@@ -695,7 +693,7 @@
 									</div>
 									<textarea class="footer_contact_input footer_contact_textarea"
 										placeholder="Message" required="required"></textarea>
-									<button class="footer_contact_button">send message</button>
+									<button class="footer_contact_button">Enviar mesnaje</button>
 								</form>
 							</div>
 						</div>
@@ -704,26 +702,26 @@
 					<!-- Footer Hours -->
 					<div class="col-lg-4 footer_col">
 						<div class="footer_hours">
-							<div class="footer_hours_title">Opening Hours</div>
+							<div class="footer_hours_title">Horario de apertura</div>
 							<ul class="hours_list">
 								<li
 									class="d-flex flex-row align-items-center justify-content-start">
-									<div>Monday Thursday</div>
+									<div>Lunes Jueves</div>
 									<div class="ml-auto">8.00 19.00</div>
 								</li>
 								<li
 									class="d-flex flex-row align-items-center justify-content-start">
-									<div>Friday</div>
+									<div>Viernes</div>
 									<div class="ml-auto">8.00 - 18.30</div>
 								</li>
 								<li
 									class="d-flex flex-row align-items-center justify-content-start">
-									<div>Saturday</div>
+									<div>Sábado</div>
 									<div class="ml-auto">9.30 17.00</div>
 								</li>
 								<li
 									class="d-flex flex-row align-items-center justify-content-start">
-									<div>Sunday</div>
+									<div>Domingo</div>
 									<div class="ml-auto">9.30 15.00</div>
 								</li>
 							</ul>
@@ -741,11 +739,11 @@
 							<nav class="footer_nav">
 							<ul
 								class="d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-start">
-								<li class="active"><a href="index.html">Home</a></li>
-								<li><a href="about.html">About Us</a></li>
-								<li><a href="services.html">Services</a></li>
-								<li><a href="news.html">News</a></li>
-								<li><a href="contact.html">Contact</a></li>
+								<li class="active"><a href="inicio.jsp">Inicio</a></li>
+								<li><a href="#">About Us</a></li>
+								<li><a href="#">Services</a></li>
+								<li><a href="#">News</a></li>
+								<li><a href="#">Contact</a></li>
 							</ul>
 							</nav>
 							<div class="footer_links">

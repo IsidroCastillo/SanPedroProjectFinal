@@ -23,7 +23,17 @@
 <link rel="stylesheet" type="text/css" href="styles/login.css">
 <link rel="stylesheet" type="text/css" href="styles/news_responsive.css">
 <sj:head jqueryui="true" jquerytheme="cupertino" locale="es" />
-
+<style type="text/css">
+	a:hover{
+		color: #5e35b1;
+	}
+	
+	@media (max-width: 400px) {
+    	.info_form_container{
+    		margin-top: -60%;
+    	}
+}
+</style>
 </head>
 <body>
 	<div class="super_container">
@@ -69,7 +79,7 @@
 								<div
 									class="header_top_content d-flex flex-row align-items-center justify-content-start">
 									<div class="logo">
-										<a href="#">health<span>+</span></a>
+										<a href="inicio.jsp">San Pedro<span>+</span></a>
 									</div>
 									<div
 										class="header_top_extra d-flex flex-row align-items-center justify-content-start ml-auto">
@@ -109,8 +119,10 @@
 						placeholder="DNI" required="required">
 					<input type="password" name="password"
 							 class="info_input" placeholder="Contraseña">
+					
 					<button class="info_form_button">Ingresar</button>
-					<a class="a text-center" href="registrarPaciente.jsp">Es nuevo aquí? Haga su registro</a>
+					<a class="a d-flex flex-column align-items-center text-center" href="#">¿Olvidaste tu contraseña?</a>
+					<a class="a d-flex flex-column align-items-center justify-content-center text-center" href="registrarPaciente.jsp">Es nuevo aquí? Haga su registro</a>
 				</form>
 			</div>
 		</div>
