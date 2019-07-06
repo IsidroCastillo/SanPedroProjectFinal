@@ -39,6 +39,14 @@
 .reserva:hover {
 	color: rgba(255, 255, 255, 0.75);
 }
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+
+.dropdown>.dropdown-toggle:active {
+    pointer-events: none;
+    color: black;
+}
 </style>
 <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="assets/css/style.css">
@@ -89,19 +97,35 @@
 									<nav class="main_nav">
 									<ul
 										class="d-flex flex-row align-items-center justify-content-start">
-										<li class="active"><a href="index.html">Inicio</a></li>
-										<li><a href="about.html">Tarjeta Salud San Pedro</a></li>
-										<li><a href="reservarCita.jsp">Reservar Cita</a></li>
-										<li><a href="news.html">Contactanos</a></li>
-										<li><a href="contact.html">Mis Resultados</a></li>
+										<li class="active"><a href="principal.jsp">Inicio</a></li>
+										<li><a href="horarioMedico.jsp">Horario</a></li>
+										
 									</ul>
 									</nav>
 									<div
 										class="search_content d-flex flex-row align-items-center
 														 justify-content-end ml-auto">
 										<ul>
-											<li><a href="reservarCita.jsp"
-												class="reserva text-uppercase"><s:property value="#session.nombre" /></a></li>
+											<li>
+												<div class="dropdown">
+													<a data-toggle="dropdown" aria-haspopup="true"
+														aria-expanded="false"
+														class="reserva text-uppercase dropdown-toggle text-white"
+														id="dropdownMenuButton"> <i class="fa fa-user"
+														aria-hidden="true"></i> <s:property
+															value="#session.nombre" /></a>
+													<div class="dropdown-menu"
+														aria-labelledby="dropdownMenuButton">
+														<a class="dropdown-item" data-toggle="modal"
+															data-target="#modalActualizar" href="#">Actualizar
+															Cuenta
+														</a> 
+														<a class="dropdown-item" data-toggle="modal"
+															data-target="#modalContraseña" href="#">Cambiar Clave</a>
+														<a class="dropdown-item" href="logout">Cerrar Sesión</a>
+													</div>
+												</div>
+											</li>
 										</ul>
 									</div>
 								</div>
@@ -124,8 +148,8 @@
 				<div
 					class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">			
 					<div class="panel-body">
-							  <table class="table table-responsive" id="tblListMedicos">
-								 <thead class="thead-dark">
+							  <table class="table table-bordered table-responsive" id="tblListMedicos">
+								 <thead class="thead-dark text-dark">
 								  <tr>
 									<th class="">Dia</th>
 									<th class="">Hora Inicio</th>
@@ -149,18 +173,14 @@
 	
 	 $(document).ready(function () { 
 			var idMedico = $('#idMedico').val();
-			
-			alert(idMedico);
 				$.ajax({			
 					type:"POST",
 					url:"horarioMedico.action",
 					data : "idMedico=" + idMedico,
 					success: function(result){
-						alert(result);
 						var output = '';
 						$.each(result.lstHorario, function(i,item){
 							
-							alert(item.descripcion);
 							output += 
 								'<tr>' +
 								'	<td>'+item.descripcion+'</td>' +          
@@ -168,7 +188,6 @@
 								'	<td>'+item.horario_fin+'</td>' +		
 								'	<td>'+item.turno+'</td>' +	
 						        '</tr>';
-							
 							
 						});
 						
@@ -178,15 +197,8 @@
 					error: function(result){
 						alert("Some error occured.");
 					}
-					
 				});
-									
-				
 	 });
-	
-	
-	
-	
 	
 	</script>
 	

@@ -2,22 +2,6 @@
 
 <body>
 	
-<!-- 	<div> -->
-<!-- 		<h2 class="text-center"> -->
-<!-- 			Bienvenido: -->
-<%-- 			<s:property value="#session.nombre" /> --%>
-<!-- 		</h2> -->
-
-		
-<!-- 		<p class="text-center" style="font-size: 15px;">Aquí podrás -->
-<!-- 			reservar, pagar, reprogramar tus citas y acceder a tu información de -->
-<!-- 			manera fácil y segura.</p> -->
-<!-- 		<div id="hola"> -->
-		
-		
-<!-- 		</div> -->
-<!-- 	</div> -->
-
 <div class="about">
 		<div class="container">
 			<div class="row">
@@ -72,6 +56,7 @@
 	<input type="hidden" id="tipoUsuario" value="<s:property value="#session.tipoUsuario" />">
 	<input type="hidden" id="txtUsu" value="<s:property value="#session.user" />">
 	<input type="hidden" id="txtPas" value="<s:property value="#session.pass" />">
+	
 	
 	<script type="text/javascript">
 	 $(document).ready(function () { 

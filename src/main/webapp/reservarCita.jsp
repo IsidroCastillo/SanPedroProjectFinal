@@ -40,6 +40,15 @@
 .reserva:hover {
 	color: rgba(255, 255, 255, 0.75);
 }
+
+.btn-next, .btn-submit{
+background: #8000ff;
+color: white;
+}
+.btn{
+background: #8000ff;
+color: white;
+}
 </style>
 <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="assets/css/style.css">
@@ -47,9 +56,6 @@
 <body>
 
 	<!-- 	WIZARD -->
-	<br>
-	<br>
-	<br>
 	<div class="top-content border-0">
 		<div class="container">
 			<div class="row">
@@ -58,7 +64,7 @@
 					<form role="form" action="" method="post" class="f1">
 
 						<h3>Reservando Cita</h3>
-						<p>Complete El Formulario para completar la cita</p>
+						<p>Complete el formulario para completar la cita</p>
 						<div class="f1-steps">
 							<div class="f1-progress">
 								<div class="f1-progress-line" data-now-value="16.66"
@@ -74,7 +80,7 @@
 								<div class="f1-step-icon">
 									<i class="fa fa-key"></i>
 								</div>
-								<p>Medico</p>
+								<p>Médico</p>
 							</div>
 							<div class="f1-step">
 								<div class="f1-step-icon">
@@ -85,7 +91,7 @@
 						</div>
 
 						<fieldset>
-							<h4>Tell us who you are:</h4>
+							<h4>Seleccionar Especialidad</h4>
 
 							   <div class="form-group">
                                <select class="form-control" id="especialidad" style="height: 34px;">
@@ -100,12 +106,12 @@
 						</fieldset>
 
 						<fieldset>
-							<h4>Seleccionar Medico:</h4>
+							<h4>Seleccionar Médico:</h4>
 							<div class="panel-body">
 							  <table class="table table-responsive" id="tblListMedicos">
 								 <thead class="thead-dark">
 								  <tr>
-									<th class="">Medico</th>
+									<th class="">Médico</th>
 									<th class="">Dni</th>
 									<th class="">Correo</th>
 									
@@ -218,10 +224,6 @@
 		            </div>
 		        </div>
 		        
-<%-- 		        <input type="hidden" id="txtIdPaciente" value="<s:property value="#session.idPaciente" />"> --%>
-<%-- 		        <input type="hidden" id="txtdni" value="<s:property value="#session.dni" />"> --%>
-		        
-		        
 		        <div class="form-group" id="horas">
 		            <label class="col-sm-1 control-label"></label>
 		             
@@ -236,7 +238,7 @@
 		
       <div class="modal-footer">
         <button type="button" class="btn btn-default" id="mbtnCerrarModal" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-info" id="mbtnDeleteImp">Eliminar </button>
+        <button type="button" class="btn btn-default" id="mbtnDeleteImp">Eliminar </button>
       </div>
     </div>
   </div>
@@ -341,7 +343,7 @@
 		 								
 		 									  output += 
 		 									'<div class="col-sm-1" id="content">' +
-		 									'<a href="#" title="Editar informacion" data-dismiss="modal" onClick="detalleCita(\''+valor+'\');"><button type="button" class="btn btn-info" id="mbtnHoras">'+valor+'</button></a>'+		 	
+		 									'<a href="#" title="Editar informacion" data-dismiss="modal" onClick="detalleCita(\''+valor+'\');"><button type="button" class="btn btn-next" id="mbtnHoras">'+valor+'</button></a>'+		 	
 		 						            '</div>';
 					                	  });
 		 									  
@@ -415,8 +417,25 @@
 						$('#txFecha').val(fecha);
 						$('#txMotivo').val(motivo);
 						$('#txtEspecialidad').val(espec);
-						swal ( "¡ Buen trabajo! "+fecha , " Has hecho clic en el botón " , "success" )   ;
+						/*Modificación */
+// 						swal ( "¡ Buen trabajo! "+fecha , " Has hecho clic en el botón " , "success" )   ;
+						/*Modificación */
 						
+						swal({
+							  title: "¿Estas seguro?",
+							  text: "Fecha seleccionada:"+fecha,
+							  icon: "warning",
+							  buttons: true,
+							  warningMode: true,
+							})
+							.then((willDelete) => {
+							  if (willDelete) {
+							    
+							  } else {
+							    swal("Your imaginary file is safe!");
+							  }
+							});
+						/**/
 						
 					};
 					

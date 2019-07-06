@@ -134,9 +134,9 @@
 												class="d-flex flex-row align-items-center justify-content-start">
 												<li class="active"><a href="inicio.jsp">Inicio</a></li>
 												<li><a href="about.jsp">La Clínica </a></li>
-												<li><a href="services.html">Citas en Línea</a></li>
-												<li><a href="news.html">Servicios</a></li>
-												<li><a href="contact.html">Contacto</a></li>
+												<li><a href="login.jsp">Citas en Línea</a></li>
+												<li><a href="services.jsp">Servicios</a></li>
+												<li><a href="contact.jsp">Contacto</a></li>
 											</ul>
 											</nav>
 											<div class="search_content d-flex flex-row align-items-center

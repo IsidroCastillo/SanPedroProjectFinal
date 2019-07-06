@@ -3,6 +3,7 @@
 <head>
 <title>Nosotros</title>
 <meta charset=â€utf8â€³ />
+<link rel="icon" type="image/png" href="images/favicon.ico"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Health medical template project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,10 +24,6 @@
 	<div class="menu trans_500">
 		<div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
 			<div class="menu_close_container"><div class="menu_close"></div></div>
-			<form action="#" class="menu_search_form">
-				<input type="text" class="menu_search_input" placeholder="Search" required="required">
-				<button class="menu_search_button"><i class="fa fa-search" aria-hidden="true"></i></button>
-			</form>
 			<ul>
 				<li class="menu_item"><a href="inicio.jsp">Inicio</a></li>
 				<li class="menu_item"><a href="about.jsp">Nosotros</a></li>
@@ -61,24 +58,29 @@
 					<div class="container">
 						<div class="row">
 							<div class="col">
-								<div class="header_top_content d-flex flex-row align-items-center justify-content-start">
+								<div
+									class="header_top_content d-flex flex-row align-items-center justify-content-start">
 									<div class="logo">
-										<a href="#">salud<span>+</span></a>	
+										<a href="#">San Pedro<span>+</span></a>
 									</div>
-									<div class="header_top_extra d-flex flex-row align-items-center justify-content-start ml-auto">
+									<div
+										class="header_top_extra d-flex flex-row align-items-center justify-content-start ml-auto">
 										<div class="header_top_nav">
-											<ul class="d-flex flex-row align-items-center justify-content-start">
-												<li><a href="#">Mesa de Ayuda</a></li>
-												<li><a href="#">Servicios de emergencia</a></li>
-												<li><a href="#">Cita</a></li>
+											<ul
+												class="d-flex flex-row align-items-center justify-content-start">
+												<li><a href="#">Factura Electrónica</a></li>
+												<li><a href="#">Servicios de Emergencia</a></li>
+												<li><a href="#">Web Médica</a></li>
 											</ul>
 										</div>
 										<div class="header_top_phone">
-											<i class="fa fa-phone" aria-hidden="true"></i>
-											<span>+34 586 778 8892</span>
+											<i class="fa fa-phone" aria-hidden="true"></i> <span>+34
+												586 778 8892</span>
 										</div>
 									</div>
-									<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
+									<div class="hamburger ml-auto">
+										<i class="fa fa-bars" aria-hidden="true"></i>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -90,21 +92,23 @@
 							<div class="container">
 								<div class="row">
 									<div class="col">
-										<div class="header_nav_content d-flex flex-row align-items-center justify-content-start">
+										<div
+											class="header_nav_content d-flex flex-row align-items-center justify-content-start">
 											<nav class="main_nav">
-												<ul class="d-flex flex-row align-items-center justify-content-start">
-													<li><a href="inicio.jsp">Inicio</a></li>
-													<li class="active"><a href="about.jsp">Nosotros</a></li>
-													<li><a href="services.jsp">Servicios</a></li>
-													<li><a href="news.jsp">Noticias</a></li>
-													<li><a href="contact.jsp">Contactanos</a></li>
-												</ul>
+											<ul
+												class="d-flex flex-row align-items-center justify-content-start">
+												<li class="active"><a href="inicio.jsp">Inicio</a></li>
+												<li><a href="about.jsp">La Clínica </a></li>
+												<li><a href="login.jsp">Citas en Línea</a></li>
+												<li><a href="services.jsp">Servicios</a></li>
+												<li><a href="contact.jsp">Contacto</a></li>
+											</ul>
 											</nav>
-											<div class="search_content d-flex flex-row align-items-center justify-content-end ml-auto">
-												<form action="#" id="search_container_form" class="search_container_form">
-													<input type="text" class="search_container_input" placeholder="Search" required="required">
-													<button class="search_container_button"><i class="fa fa-search" aria-hidden="true"></i></button>
-												</form>
+											<div class="search_content d-flex flex-row align-items-center
+														 justify-content-end ml-auto">
+													<ul>
+														<li><a href="login.jsp" class="reserva text-uppercase text-white">Pide tu cita <i class="fa fa-arrow-right"></i></a></li>
+													</ul>
 											</div>
 										</div>
 									</div>
@@ -112,9 +116,9 @@
 							</div>
 						</div>
 					</div>
-				</div>	
+				</div>
 			</div>
-		</header>
+			</header>
 
 		<div class="home_container">
 			<div class="container">

@@ -25,7 +25,7 @@
 <%-- <sj:head jqueryui="true" jquerytheme="cupertino" locale="es" /> --%>
     <script src = " https://unpkg.com/sweetalert/dist/sweetalert.min.js " > </script> 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
     
     <script src="https://unpkg.com/gijgo@1.9.11/js/gijgo.min.js" type="text/javascript"></script>
     <link href="https://unpkg.com/gijgo@1.9.11/css/gijgo.min.css" rel="stylesheet" type="text/css" />
@@ -56,6 +56,17 @@
 }
 .reserva:hover {
 	color: rgba(255, 255, 255, 0.75);
+}
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+
+.dropdown>.dropdown-toggle:active {
+    pointer-events: none;
+    color: black;
+}
+.text{
+	font-weight: bold;
 }
 </style>
 
@@ -151,7 +162,7 @@
 										<div
 											class="search_content d-flex flex-row align-items-center
 														 justify-content-center ml-auto">
-											<ul class="d-flex flex-row align-items-center justify-content-start">
+											<ul class="">
 											<li>
 												<div class="dropdown">
 													<a data-toggle="dropdown" aria-haspopup="true"
@@ -165,10 +176,10 @@
 														<a class="dropdown-item" data-toggle="modal"
 															data-target="#modalActualizar" href="#">Actualizar
 															Cuenta
-														</a> <a class="dropdown-item" href="#">Registrar Familiar</a>
+														</a> 
 														<a class="dropdown-item" data-toggle="modal"
-															data-target="#modalContraseña" href="#">Cambiar Clave</a> <a
-															class="dropdown-item" href="logout">Cerrar Sesión</a>
+															data-target="#modalContraseña" href="#">Cambiar Clave</a>
+														<a class="dropdown-item" href="logout">Cerrar Sesión</a>
 													</div>
 												</div>
 											</li>
@@ -247,6 +258,50 @@
 			</div>
 		</div>
 	</div>
+	<div class="container">
+	  <div class="modal" id="myModal">
+	    <div class="modal-dialog">
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <h4 class="modal-title">Tarjeta de Salud San Pedro</h4>
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        </div>
+	        <div class="modal-body">
+	         <p class="text text-justify"> Ahora podrás afiliarte virtualmente a la y accede a grandes descuentos.
+			  Tarifas preferenciales en los servicios de atención ambulatoria, emergencia
+			   y hospitalización además de farmacia, laboratorio y exámenes auxiliares.</p>
+			   <br>
+			   <img class="mx-auto" alt="" src="images/tarjeta.jpg">
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default" data-dismiss="modal">Adquirir</button>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="container">
+	  <div class="modal" id="myModal2">
+	    <div class="modal-dialog">
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <h4 class="modal-title">Ubicación y Horarios</h4>
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        </div>
+	        <div class="modal-body">
+	          <p class="text">Dirección: Av. Los Laureles 436 - Urb. California - Trujillo</p>
+	          <p class="text">Ciudad: Trujillo</p>
+	          <p class="text">Horario de Atención:<br> Lunes a viernes de 9:00 am - 1:00 pm <br> y de 4:00 pm - 9:00 pm <br>
+	          	 Sábados de 9:00 am - 1:00 pm y de 5:00 pm 8:00 pm. </p>
+	          <p class="text">Emergencias: atención 24 horas</p>
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
 	<input type="hidden" id="tipoUsuario" value="<s:property value="#session.tipoUsuario" />">
 	<script type="text/javascript">
 	
@@ -277,11 +332,11 @@
 		 }else {
 			
 			 output += 
-					'<li class="active"><a href="index.html">Inicio</a></li>' +
-					'<li><a href="about.html">Tarjeta Salud San Pedro</a></li>'+
+					'<li class="active"><a href="principal.jsp">Inicio</a></li>' +
+					'<li><a href="#" data-toggle="modal" data-target="#myModal">Tarjeta Salud San Pedro</a></li>'+
 					'<li><a href="reservarCita.jsp">Reservar Cita</a></li>'+
-					'<li><a href="news.html">Contactanos</a></li>'+
-					'<li><a href="contact.html">Mis Resultados</a></li>';
+					'<li><a href="#" data-toggle="modal" data-target="#myModal2">Contactanos</a></li>'+
+					'<li><a href="#">Mis Resultados</a></li>';
 					
 					
 					

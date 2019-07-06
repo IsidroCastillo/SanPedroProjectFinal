@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Contact</title>
+<title>Contacto</title>
 <meta charset="utf-8">
+
+<link rel="icon" type="image/png" href="images/favicon.ico"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Health medical template project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,16 +22,12 @@
 	<div class="menu trans_500">
 		<div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
 			<div class="menu_close_container"><div class="menu_close"></div></div>
-			<form action="#" class="menu_search_form">
-				<input type="text" class="menu_search_input" placeholder="Search" required="required">
-				<button class="menu_search_button"><i class="fa fa-search" aria-hidden="true"></i></button>
-			</form>
 			<ul>
-				<li class="menu_item"><a href="index.html">Home</a></li>
-				<li class="menu_item"><a href="#">About us</a></li>
-				<li class="menu_item"><a href="#">Services</a></li>
-				<li class="menu_item"><a href="news.html">News</a></li>
-				<li class="menu_item"><a href="contact.html">Contact</a></li>
+				<li class="menu_item"><a href="inicio.jsp">Inicio</a></li>
+				<li class="menu_item"><a href="#">La Clínica</a></li>
+				<li class="menu_item"><a href="#">Citas en Línea</a></li>
+				<li class="menu_item"><a href="news.jsp">Servicios</a></li>
+				<li class="menu_item"><a href="contact.jsp">Contacto</a></li>
 			</ul>
 		</div>
 		<div class="menu_social">
@@ -57,24 +55,29 @@
 					<div class="container">
 						<div class="row">
 							<div class="col">
-								<div class="header_top_content d-flex flex-row align-items-center justify-content-start">
+								<div
+									class="header_top_content d-flex flex-row align-items-center justify-content-start">
 									<div class="logo">
-										<a href="#">health<span>+</span></a>	
+										<a href="#">San Pedro<span>+</span></a>
 									</div>
-									<div class="header_top_extra d-flex flex-row align-items-center justify-content-start ml-auto">
+									<div
+										class="header_top_extra d-flex flex-row align-items-center justify-content-start ml-auto">
 										<div class="header_top_nav">
-											<ul class="d-flex flex-row align-items-center justify-content-start">
-												<li><a href="#">Help Desk</a></li>
-												<li><a href="#">Emergency Services</a></li>
-												<li><a href="#">Appointment</a></li>
+											<ul
+												class="d-flex flex-row align-items-center justify-content-start">
+												<li><a href="#">Factura Electrónica</a></li>
+												<li><a href="#">Servicios de Emergencia</a></li>
+												<li><a href="#">Web Médica</a></li>
 											</ul>
 										</div>
 										<div class="header_top_phone">
-											<i class="fa fa-phone" aria-hidden="true"></i>
-											<span>+34 586 778 8892</span>
+											<i class="fa fa-phone" aria-hidden="true"></i> <span>+34
+												586 778 8892</span>
 										</div>
 									</div>
-									<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
+									<div class="hamburger ml-auto">
+										<i class="fa fa-bars" aria-hidden="true"></i>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -86,21 +89,23 @@
 							<div class="container">
 								<div class="row">
 									<div class="col">
-										<div class="header_nav_content d-flex flex-row align-items-center justify-content-start">
+										<div
+											class="header_nav_content d-flex flex-row align-items-center justify-content-start">
 											<nav class="main_nav">
-												<ul class="d-flex flex-row align-items-center justify-content-start">
-													<li><a href="index.html">Home</a></li>
-													<li><a href="about.html">About Us</a></li>
-													<li><a href="services.html">Services</a></li>
-													<li class="active"><a href="news.html">News</a></li>
-													<li><a href="contact.html">Contact</a></li>
-												</ul>
+											<ul
+												class="d-flex flex-row align-items-center justify-content-start">
+												<li class="active"><a href="inicio.jsp">Inicio</a></li>
+												<li><a href="about.jsp">La Clínica </a></li>
+												<li><a href="login.jsp">Citas en Línea</a></li>
+												<li><a href="services.jsp">Servicios</a></li>
+												<li><a href="contact.jsp">Contacto</a></li>
+											</ul>
 											</nav>
-											<div class="search_content d-flex flex-row align-items-center justify-content-end ml-auto">
-												<form action="#" id="search_container_form" class="search_container_form">
-													<input type="text" class="search_container_input" placeholder="Search" required="required">
-													<button class="search_container_button"><i class="fa fa-search" aria-hidden="true"></i></button>
-												</form>
+											<div class="search_content d-flex flex-row align-items-center
+														 justify-content-end ml-auto">
+													<ul>
+														<li><a href="login.jsp" class="reserva text-uppercase text-white">Pide tu cita <i class="fa fa-arrow-right"></i></a></li>
+													</ul>
 											</div>
 										</div>
 									</div>
@@ -108,16 +113,16 @@
 							</div>
 						</div>
 					</div>
-				</div>	
+				</div>
 			</div>
-		</header>
+			</header>
 
 		<div class="home_container">
 			<div class="container">
 				<div class="row">
 					<div class="col">
 						<div class="home_content">
-							<div class="home_title">Contact</div>
+							<div class="home_title">Contacto</div>
 						</div>
 					</div>
 				</div>
@@ -134,14 +139,14 @@
 				<!-- Contact form -->
 				<div class="col-lg-8 contact_col">
 					<div class="contact_form">
-						<div class="contact_title">Get in touch</div>
+						<div class="contact_title">Ponerse en contacto</div>
 						<div class="contact_form_container">
 							<form action="#" id="contact_form" class="contact_form">
 								<input type="text" id="contact_input" class="contact_input" placeholder="Your Name" required="required">
 								<input type="email" id="contact_email" class="contact_input" placeholder="Your E-mail" required="required">
 								<input type="text" id="contact_subject" class="contact_input" placeholder="Subject" required="required">
 								<textarea class="contact_input contact_textarea" id="contact_textarea" placeholder="Message" required="required"></textarea>
-								<button class="contact_button" id="contact_button">send message</button>
+								<button class="contact_button" id="contact_button">Enviar Mensaje</button>
 							</form>
 						</div>
 					</div>
@@ -150,21 +155,21 @@
 				<!-- Make an Appointment -->
 				<div class="col-lg-4 contact_col">
 					<div class="info_form_container">
-						<div class="info_form_title">Make an Appointment</div>
+						<div class="info_form_title">Hacer una Cita</div>
 						<form action="#" class="info_form" id="info_form">
 							<select name="info_form_dep" id="info_form_dep" class="info_form_dep info_input info_select">
 								<option>Department</option>
-								<option>Department</option>
-								<option>Department</option>
+								<option>Lambayeque</option>
+								<option>La Libertad</option>
 							</select>
 							<select name="info_form_doc" id="info_form_doc" class="info_form_doc info_input info_select">
 								<option>Doctor</option>
-								<option>Doctor</option>
-								<option>Doctor</option>
+								<option>Isidro</option>
+								<option>Cristian</option>
 							</select>
 							<input type="text" class="info_input" placeholder="Name" required="required">
 							<input type="text" class="info_input" placeholder="Phone No">
-							<button class="info_form_button">make an appointment</button>
+							<button class="info_form_button">Hacer una Cita</button>
 						</form>
 					</div>
 				</div>
@@ -174,10 +179,10 @@
 					<div class="row">
 						<div class="col-lg-3 offset-lg-1">
 							<div class="contact_info_list">
-								<div class="contact_info_title">Contact Info</div>
+								<div class="contact_info_title">Información de Contacto</div>
 								<ul>
-									<li><span>Address: </span>Mitlton Str. 26-27 Gibraltar</li>
-									<li><span>Email: </span>yourmail@gmail.com</li>
+									<li><span>Address: </span>Mitlton Str. 26-27 Milagro york</li>
+									<li><span>Email: </span>soporte-sanpedro@gmail.com</li>
 									<li><span>Phone: </span>+53 345 7953 32453</li>
 								</ul>
 							</div>
@@ -185,30 +190,30 @@
 						<div class="col-lg-4">
 							<div class="contact_info_list contact_info_list_2">
 								<ul>
-									<li><span>Address: </span>Mitlton Str. 26-27 London UK</li>
-									<li><span>Email: </span>yourmail@gmail.com</li>
+									<li><span>Address: </span>Mitlton Str. 26-27 Milagro york UK</li>
+									<li><span>Email: </span>sanpedro@gmail.com</li>
 									<li><span>Phone: </span>+53 345 7953 32453</li>
 								</ul>
 							</div>
 						</div>
 						<div class="col-lg-3">
 							<div class="contact_info_list">
-								<div class="contact_info_title">Opening Hours</div>
+								<div class="contact_info_title">Horario de apertura</div>
 								<ul>
 									<li class="d-flex flex-row align-items-center justify-content-start">
-										<div>Monday-Thursday</div>
+										<div>Lunes a jueves</div>
 										<div class="ml-auto">8.00 - 19.00</div>
 									</li>
 									<li class="d-flex flex-row align-items-center justify-content-start">
-										<div>Friday</div>
+										<div>Viernes</div>
 										<div class="ml-auto">8.00 - 18.30</div>
 									</li>
 									<li class="d-flex flex-row align-items-center justify-content-start">
-										<div>Saturday</div>
+										<div>Sabado</div>
 										<div class="ml-auto">9.30 - 17.00</div>
 									</li>
 									<li class="d-flex flex-row align-items-center justify-content-start">
-										<div>Sunday</div>
+										<div>Domingo</div>
 										<div class="ml-auto">9.30 - 15.00</div>
 									</li>
 								</ul>
@@ -245,9 +250,9 @@
 					<div class="col-lg-3 footer_col">
 						<div class="footer_about">
 							<div class="logo">
-								<a href="#">health<span>+</span></a>	
+								<a href="#">salud<span>+</span></a>	
 							</div>
-							<div class="footer_about_text">Lorem ipsum dolor sit amet, lorem maximus consectetur adipiscing elit. Donec malesuada lorem maximus mauris.</div>
+							<div class="footer_about_text">Somos una red de Clinica y Centros medicos a nivel nacional, con la tecnologia mas moderna y el Staff medico mas comprometido con la salud de nuestros pacientes y la de su familia.</div>
 							<div class="footer_social">
 								<ul class="d-flex flex-row align-items-center justify-content-start">
 									<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
@@ -259,7 +264,7 @@
 								</ul>
 							</div>
 							<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | Esta plantilla está hecha con <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://cibertec.edu.pe" target="_blank">Cibertec</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 </div>
 						</div>
@@ -268,7 +273,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					<!-- Footer Contact -->
 					<div class="col-lg-5 footer_col">
 						<div class="footer_contact">
-							<div class="footer_contact_title">Quick Contact</div>
+							<div class="footer_contact_title">Contactanos</div>
 							<div class="footer_contact_form_container">
 								<form action="#" class="footer_contact_form" id="footer_contact_form">
 									<div class="d-flex flex-xl-row flex-column align-items-center justify-content-between">
@@ -276,7 +281,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 										<input type="email" class="footer_contact_input" placeholder="E-mail" required="required">
 									</div>
 									<textarea class="footer_contact_input footer_contact_textarea" placeholder="Message" required="required"></textarea>
-									<button class="footer_contact_button">send message</button>
+									<button class="footer_contact_button">Enviar Mensaje</button>
 								</form>
 							</div>
 						</div>
@@ -285,22 +290,22 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					<!-- Footer Hours -->
 					<div class="col-lg-4 footer_col">
 						<div class="footer_hours">
-							<div class="footer_hours_title">Opening Hours</div>
+							<div class="footer_hours_title">Horario de apertura</div>
 							<ul class="hours_list">
 								<li class="d-flex flex-row align-items-center justify-content-start">
-									<div>Monday â€“ Thursday</div>
+									<div>Lunes a jueves</div>
 									<div class="ml-auto">8.00 â€“ 19.00</div>
 								</li>
 								<li class="d-flex flex-row align-items-center justify-content-start">
-									<div>Friday</div>
+									<div>Viernes</div>
 									<div class="ml-auto">8.00 - 18.30</div>
 								</li>
 								<li class="d-flex flex-row align-items-center justify-content-start">
-									<div>Saturday</div>
+									<div>Sabado</div>
 									<div class="ml-auto">9.30 â€“ 17.00</div>
 								</li>
 								<li class="d-flex flex-row align-items-center justify-content-start">
-									<div>Sunday</div>
+									<div>Domingo</div>
 									<div class="ml-auto">9.30 â€“ 15.00</div>
 								</li>
 							</ul>
@@ -316,18 +321,18 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 						<div class="footer_bar_content d-flex flex-sm-row flex-column align-items-lg-center align-items-start justify-content-start">
 							<nav class="footer_nav">
 								<ul class="d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-start">
-									<li class="active"><a href="index.html">Home</a></li>
-									<li><a href="about.html">About Us</a></li>
-									<li><a href="services.html">Services</a></li>
-									<li><a href="news.html">News</a></li>
-									<li><a href="contact.html">Contact</a></li>
+													<li class="active"><a href="index.jsp">Inicio</a></li>
+													<li><a href="about.jsp">Nosotros</a></li>
+													<li><a href="services.jsp">Servicios</a></li>
+													<li><a href="news.jsp">Noticias</a></li>
+													<li><a href="contact.jsp">Contacto</a></li>
 								</ul>
 							</nav>
 							<div class="footer_links">
 								<ul class="d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-start">
-									<li><a href="#">Help Desk</a></li>
-									<li><a href="#">Emergency Services</a></li>
-									<li><a href="#">Appointment</a></li>
+									<li><a href="#">Mesa de Ayuda</a></li>
+												<li><a href="#">Servicios de emergencia</a></li>
+												<li><a href="#">Cita</a></li>
 								</ul>
 							</div>
 							<div class="footer_phone ml-lg-auto">

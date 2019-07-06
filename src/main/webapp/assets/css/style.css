@@ -40,7 +40,7 @@ h4 {
 
 img { max-width: 100%; }
 
-::-moz-selection { background: #f35b3f; color: #fff; text-shadow: none; }
+::-moz-selection { background: #8000ff; color: #fff; text-shadow: none; }
 ::selection { background: #8000ff; color: #fff; text-shadow: none; }
 
 
@@ -122,8 +122,8 @@ ul.navbar-nav {
 }
 
 .f1-step p { color: #ccc; }
-.f1-step.activated p { color: #f35b3f; }
-.f1-step.active p { color: #f35b3f; }
+.f1-step.activated p { color: #8000ff; }
+.f1-step.active p { color: #8000ff; }
 
 .f1 fieldset { display: none; text-align: left; }
 
