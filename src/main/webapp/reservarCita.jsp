@@ -108,8 +108,8 @@ color: white;
 						<fieldset>
 							<h4>Seleccionar Médico:</h4>
 							<div class="panel-body">
-							  <table class="table table-responsive" id="tblListMedicos">
-								 <thead class="thead-dark">
+							  <table class="table table-bordered table-responsive" id="tblListMedicos">
+								 <thead class="thead-default text-black">
 								  <tr>
 									<th class="">Médico</th>
 									<th class="">Dni</th>

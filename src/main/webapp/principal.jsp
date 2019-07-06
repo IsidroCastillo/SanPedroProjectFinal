@@ -12,13 +12,11 @@
 			</div>
 			<div class="row about_row row-eq-height">
 				<div class="col-lg-4">
-					<div class="logo">
-						<a href="#">Clinica San Pedro<span>+</span></a>	
+					
+					<div class="about_text_highlight">
+						<img alt="" src="images/logo.png">
 					</div>
-					<div class="about_text_highlight">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem maximus malesuada lorem max imus mauris.</div>
-					<div class="about_text">
-						<p>Contamos con un completo staff médico y tecnología de avanzada para realizar diagnósticos precisos y tratamientos eficaces con procesos de seguridad y calidad en la atención para cada uno de nuestros pacientes.</p>
-					</div>
+					
 				</div>
 				<div class="col-lg-8">
 					<div class="about_text_2">
