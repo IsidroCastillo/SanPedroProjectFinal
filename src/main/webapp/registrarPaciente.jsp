@@ -63,7 +63,7 @@
 								<div
 									class="header_top_content d-flex flex-row align-items-center justify-content-start">
 									<div class="logo">
-										<a href="#">health<span>+</span></a>
+										<a href="#">San Pedro<span>+</span></a>
 									</div>
 									<div
 										class="header_top_extra d-flex flex-row align-items-center justify-content-start ml-auto">
