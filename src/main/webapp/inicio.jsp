@@ -160,11 +160,9 @@
 					<div class="row">
 						<div class="col">
 							<div class="home_content">
-								<div class="home_title">Servicios médicos que puedas confiar</div>
-								<div class="home_text">Lorem ipsum dolor sit amet,
-									consectetur adipiscing elit. Donec malesuada lorem maximus
-									mauris scelerisque, at rutrum nulla dictum. Ut ac ligula
-									sapien.</div>
+								<div class="home_title">El Mejor Staff Médico</div>
+								<div class="home_text">Médicos de primer nivel y los tecnólogos médicos más especializados,
+													 forman parte del staff de Clínica Internacional, han sido capacitados en las más modernas aplicaciones que existen en el sector salud.</div>
 								<div class="button home_button">
 									<a href="#"><span>Leer más</span><span>Leer más</span></a>
 								</div>

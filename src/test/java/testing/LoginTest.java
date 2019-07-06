@@ -1,4 +1,4 @@
-package testing;
+/*package testing;
 
 import org.apache.struts2.StrutsTestCase;
 import org.junit.Test;
@@ -30,3 +30,4 @@ public class LoginTest extends StrutsTestCase{
 
 
 }
+*/
