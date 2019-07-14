@@ -49,6 +49,9 @@ color: white;
 background: #8000ff;
 color: white;
 }
+.icon{
+	margin-top: 25%;
+}
 </style>
 <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="assets/css/style.css">
@@ -72,19 +75,19 @@ color: white;
 							</div>
 							<div class="f1-step active">
 								<div class="f1-step-icon">
-									<i class="fa fa-user"></i>
+									<i class="fa fa-user icon"></i>
 								</div>
 								<p>Especialidad</p>
 							</div>
 							<div class="f1-step">
 								<div class="f1-step-icon">
-									<i class="fa fa-key"></i>
+									<i class="fa fa-key icon"></i>
 								</div>
 								<p>Médico</p>
 							</div>
 							<div class="f1-step">
 								<div class="f1-step-icon">
-									<i class="fa fa-twitter"></i>
+									<i class="fa fa-twitter icon"></i>
 								</div>
 								<p>Detalle</p>
 							</div>
@@ -327,9 +330,10 @@ color: white;
 							success: function(result){
 								var output = '';
 								$.each(result.listaMedicoxID, function(i,item){								
-									var horasDia = 	 [ "6:30","7:00" ,"7:30" , "8:00","8:30","9:00","9:30","10:00","10:30"];
-									var horasTarde = [ "12:00","12:30","13:00","13:30","14:00","14:30","15:00","15:30","16:00","16:30"];
-									var horasNoche = [ "17:30" ,"18:00" , "18:30","19:00","19:30","20:00","20:30","21:00","21:30"];									
+// 									var horasDia = 	 [ "6:30","7:00" ,"7:30" , "8:00","8:30","9:00","9:30","10:00","10:30"];
+// 									var horasTarde = [ "12:00","12:30","13:00","13:30","14:00","14:30","15:00","15:30","16:00","16:30"];
+// 									var horasNoche = [ "17:30" ,"18:00" , "18:30","19:00","19:30","20:00","20:30","21:00","21:30"];
+									
 									var turno = item.turno;
 									
 									 switch (turno) {
@@ -382,8 +386,6 @@ color: white;
 								alert("Some error occured.");
 							}
 						});
-					
-					
 					
 				});
 				

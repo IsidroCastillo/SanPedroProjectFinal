@@ -162,7 +162,7 @@
 										<div
 											class="search_content d-flex flex-row align-items-center
 														 justify-content-center ml-auto">
-											<ul class="">
+											<ul class="" style="margin-top: 5%;">
 											<li>
 												<div class="dropdown">
 													<a data-toggle="dropdown" aria-haspopup="true"
