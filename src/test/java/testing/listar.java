@@ -8,6 +8,7 @@ import java.util.List;
 
 import com.pe.sanpedro.model.HorarioMedico;
 import com.pe.sanpedro.model.Usuario;
+import com.pe.sanpedro.model.horasTurno;
 import com.pe.sanpedro.model.paciente;
 import com.pe.sanpedro.service.EspecialidadService;
 import com.pe.sanpedro.service.HorarioMedicoService;
@@ -24,7 +25,19 @@ public class listar {
 	public static void main(String[] args) throws Exception {
 		//listar2();
 		
-		pacienteService s = new pacienteService();
+		//pacienteService s = new pacienteService();
+		
+		HorarioMedicoService ser = new HorarioMedicoService();
+		horasTurno h = new horasTurno();
+		
+		List<horasTurno> lista = new ArrayList<>();
+		
+		lista = ser.listHoras();
+		
+		for (horasTurno ht : lista) {
+			System.out.println(ht.getDescripcion()+" " + ht.getIdTurno());
+		}
+		
 		
 //		paciente p = new paciente();
 //		p.setCelular("123456789");
@@ -35,13 +48,13 @@ public class listar {
 //		String contra ="jordy";
 //		String nueva="sad";
 //		int id =2;
-		Usuario usu = new Usuario();
-		usu.setPassword("jordy");
-		usu.setNuevaContra("123456");
-		usu.setIdUsuario(2);
-		
-		
-		s.actualizarContra(usu);
+//		Usuario usu = new Usuario();
+//		usu.setPassword("jordy");
+//		usu.setNuevaContra("123456");
+//		usu.setIdUsuario(2);
+//		
+//		
+//		s.actualizarContra(usu);
 		
 		
 //		int idMedico = 1;

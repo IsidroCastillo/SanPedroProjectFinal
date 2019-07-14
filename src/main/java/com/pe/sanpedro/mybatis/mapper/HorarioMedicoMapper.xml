@@ -50,4 +50,9 @@
  	<select id="mostraHoras" resultType="com.pe.sanpedro.model.HorarioMedico" statementType="CALLABLE" parameterType="java.util.Map">
  		call sp_medicoXfecha(#{id},#{fechaTur})
 	</select>
+	
+	<select id="listarHoras" resultType="com.pe.sanpedro.model.horasTurno">
+ 		Select descripcion,idTurno from horasturno;
+	</select>
+	
 </mapper>

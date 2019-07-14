@@ -330,56 +330,91 @@ color: white;
 							success: function(result){
 								var output = '';
 								$.each(result.listaMedicoxID, function(i,item){								
-// 									var horasDia = 	 [ "6:30","7:00" ,"7:30" , "8:00","8:30","9:00","9:30","10:00","10:30"];
-// 									var horasTarde = [ "12:00","12:30","13:00","13:30","14:00","14:30","15:00","15:30","16:00","16:30"];
-// 									var horasNoche = [ "17:30" ,"18:00" , "18:30","19:00","19:30","20:00","20:30","21:00","21:30"];
-									
+// 								
+
+									alert(item.id);
+									var id = item.id;
 									var turno = item.turno;
 									
-									 switch (turno) {
-					                  case 'Descanso':
+									 switch (id) {
+					                  case 4:
+					                	  
 					                    alert('Hola Descanso');
 					                    
 					                    break;
-					                  case 'Tarde':
-					                	 
-					                	  horasTarde.forEach( function(valor, indice, array) {
-		 								
-		 									  output += 
-		 									'<div class="col-sm-1" id="content">' +
-		 									'<a href="#" title="Editar informacion" data-dismiss="modal" onClick="detalleCita(\''+valor+'\');"><button type="button" class="btn btn-next" id="mbtnHoras">'+valor+'</button></a>'+		 	
-		 						            '</div>';
-					                	  });
+					                  case 2:
+					                	
+// 					                	 
+											 $.ajax({ 
+												 url:"horasTurno.action",
+												 success: function(result){
+													 
+													 $.each(result.horaTurno, function(i,item){	
+														 var id = 2;
+														 if(item.idTurno  == id){
+															 output += 
+								 									'<div class="col-sm-1">' +
+								 									'<a href="#" title="Editar informacion" data-dismiss="modal" onClick="detalleCita(\''+item.descripcion+'\');"><button type="button" class="btn btn-info" id="mbtnHoras">'+item.descripcion+'</button></a>'+
+								 						            '</div>';
+														 }
+														 
+													 });
+													 $('#horas').append(output);
+												 }
+												 
+											 });
 		 									  
-		 									
-		 									
-					                	  
 					                    break;
 					                  
-					                    case 'Noche':
-					                    	
-					                    	 horasNoche.forEach( function(valor, indice, array) {
-					                    		 output += 
-					 									'<div class="col-sm-1">' +
-					 									'<a href="#" title="Editar informacion" data-dismiss="modal" onClick="detalleCita(\''+valor+'\');"><button type="button" class="btn btn-info" id="mbtnHoras">'+valor+'</button></a>'+
-					 						            '</div>';
-			 									});
-					                    	
+					                    case 3:
+					                    	alert("Noche")
+					                    	 $.ajax({ 
+												 url:"horasTurno.action",
+												 success: function(result){
+													 
+													 $.each(result.horaTurno, function(i,item){	
+														 var id = 3;
+														 if(item.idTurno  == id){
+															 output += 
+								 									'<div class="col-sm-1">' +
+								 									'<a href="#" title="Editar informacion" data-dismiss="modal" onClick="detalleCita(\''+item.descripcion+'\');"><button type="button" class="btn btn-info" id="mbtnHoras">'+item.descripcion+'</button></a>'+
+								 						            '</div>';
+														 }
+														 
+													 });
+													 
+													 $('#horas').append(output);
+												 }
+												 
+											 });
+					                    				                    	
 					                    break;
 					                  default:
-					                	 
-					                  horasDia.forEach( function(valor, indice, array) {
-					                	  output += 
-			 									'<div class="col-sm-1">' +
-			 									'<a href="#" title="Editar informacion" data-dismiss="modal" onClick="detalleCita(\''+valor+'\');"><button type="button" class="btn btn-info" id="mbtnHoras">'+valor+'</button></a>'+
-			 						            '</div>';
-	 									});
+					                	  $.ajax({ 
+												 url:"horasTurno.action",
+												 success: function(result){
+													 
+													 $.each(result.horaTurno, function(i,item){	
+														 var id = 1;
+														 if(item.idTurno  == id){
+															 output += 
+								 									'<div class="col-sm-1">' +
+								 									'<a href="#" title="Editar informacion" data-dismiss="modal" onClick="detalleCita(\''+item.descripcion+'\');"><button type="button" class="btn btn-info" id="mbtnHoras">'+item.descripcion+'</button></a>'+
+								 						            '</div>';
+														 }
+														 
+													 });
+													 
+													 $('#horas').append(output);
+												 }
+												 
+											 });
+// 					    
 					                    break;
 					                }
 	
 								});
 								
-								$('#horas').append(output);
 								
 							},
 							error: function(result){

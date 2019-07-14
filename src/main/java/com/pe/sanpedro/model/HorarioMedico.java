@@ -11,6 +11,18 @@ public class HorarioMedico {
     private String fecha_fin;
     private String turno;
     private Date fechaTurno;
+    
+    private int id;
+    
+    
+    
+    
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getDescripcion() {
 		return descripcion;
 	}

@@ -57,6 +57,14 @@
 			<result name="error" type="json" ></result>
 		</action>
 		
+		<action name="horasTurno" class="com.pe.sanpedro.action.HorarioAction" method="listaHoras">
+			<result name="success" type="json"></result>
+			<result name="error" type="json" ></result>
+		</action>
+		
+		
+		
+		
 		<action name="registroCitas" class="com.pe.sanpedro.action.CitaAction" method="registrarCita">
 			<result name="success" type="json"></result>
 			<result name="error" type="json" ></result>

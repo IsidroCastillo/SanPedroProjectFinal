@@ -857,7 +857,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_medicoXfecha`(in idMedico int , 
 BEGIN
 SELECT d.descripcion as descripcion ,t.horario_inicio as horario_inicio
 	,t.horario_fin as horario_fin ,s.fecha_Fin as
-	fecha_inicio,s.fecha_Inicio as fecha_fin,t.descripcion as turno, fecha as fechaTurno FROM horariomedico hm
+	fecha_inicio,s.fecha_Inicio as fecha_fin,t.descripcion as turno,t.idTurno as id, fecha as fechaTurno FROM horariomedico hm
 				inner join semana s on s.idSemana = hm.idSemana
 					inner join dia d on hm.idDia = d.idDia
 						inner join turno t on hm.idTurno = t.idTurno
@@ -911,4 +911,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-07-14  0:06:20
+-- Dump completed on 2019-07-14  1:36:15

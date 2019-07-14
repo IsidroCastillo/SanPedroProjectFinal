@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.pe.sanpedro.model.HorarioMedico;
+import com.pe.sanpedro.model.horasTurno;
 import com.pe.sanpedro.service.HorarioMedicoService;
 
 public class HorarioAction extends ActionSupport {
@@ -12,6 +13,7 @@ public class HorarioAction extends ActionSupport {
 	private static final long serialVersionUID = 1L;
 
 	private List<HorarioMedico> lstHorario;
+	private List<horasTurno> horaTurno;
 	private List<HorarioMedico> lstHoras;
 	private String fechaIni;
 	private String fechaFin;
@@ -26,6 +28,21 @@ public class HorarioAction extends ActionSupport {
 
 
 		if (lstHorario == null) {
+			addActionError("Listado Vacío");
+			return ERROR;
+		} else {
+			return SUCCESS;
+		}
+	}
+	
+	public String listaHoras() {
+		HorarioMedicoService servicio = new HorarioMedicoService();
+
+		horaTurno = servicio.listHoras();
+
+
+
+		if (horaTurno == null) {
 			addActionError("Listado Vacío");
 			return ERROR;
 		} else {
@@ -104,6 +121,14 @@ public class HorarioAction extends ActionSupport {
 
 	public void setFechaTurno(Date fechaTurno) {
 		this.fechaTurno = fechaTurno;
+	}
+
+	public List<horasTurno> getHoraTurno() {
+		return horaTurno;
+	}
+
+	public void setHoraTurno(List<horasTurno> horaTurno) {
+		this.horaTurno = horaTurno;
 	}
 	
 	

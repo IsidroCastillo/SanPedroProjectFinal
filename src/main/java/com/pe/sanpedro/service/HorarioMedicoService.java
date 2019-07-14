@@ -8,6 +8,7 @@ import org.apache.ibatis.session.SqlSession;
 
 import com.pe.sanpedro.model.HorarioMedico;
 import com.pe.sanpedro.model.Medico;
+import com.pe.sanpedro.model.horasTurno;
 import com.pe.sanpedro.mybatis.MyBatisUtil;
 import com.pe.sanpedro.mybatis.mapper.HorarioMedicoMapper;
 
@@ -77,4 +78,20 @@ public class HorarioMedicoService {
 		return lista;
 	}
 	
+	public List<horasTurno> listHoras(){
+		SqlSession session = MyBatisUtil.getSqlSessionFactory().openSession();
+		List<horasTurno> lista = null;
+		
+		try {
+			HorarioMedicoMapper hm = session.getMapper(HorarioMedicoMapper.class);
+
+			lista = hm.listarHoras();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			session.close();
+		}
+		return lista;
+		
+	}
 }
