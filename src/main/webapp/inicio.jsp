@@ -19,6 +19,14 @@
 	href="plugins/OwlCarousel2-2.2.1/animate.css">
 <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
 <link rel="stylesheet" type="text/css" href="styles/responsive.css">
+
+<!-- INICIO CHATBOT -->
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed|IBM+Plex+Sans:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://assistant-chat-us-south.watsonplatform.net/web/chat/styles/base.0.0.4.css">
+  <link rel="stylesheet" href="https://assistant-chat-us-south.watsonplatform.net/web/chat/styles/themes/default.0.0.4.css">
+  <link rel="stylesheet" href="https://assistant-chat-us-south.watsonplatform.net/web/chat/styles/chat.0.0.4.css">
+<!-- FIN CHATBOT -->
+
 <style type="text/css">
 	.reserva{
 		fdisplay: block;
@@ -214,33 +222,20 @@
 							</div>
 						</div>
 					</div>
-
-					<!-- Info Form -->
+					<!-- INICIO CHATBOT -->
 					<div class="col-lg-4 info_box_col">
-						<div class="info_form_container">
-							<div class="info_form_title">Reservar ahora</div>
-							<form action="#" class="info_form" id="info_form">
-								<select name="info_form_dep" id="info_form_dep"
-									class="info_form_dep info_input info_select">
-									<option>Departmento</option>
-									<option>Lambayeque</option>
-									<option>La Libertad</option>
-								</select> <select name="info_form_doc" id="info_form_doc"
-									class="info_form_doc info_input info_select">
-									<option>Doctor</option>
-									<option>Isidro</option>
-									<option>Cristian</option>
-								</select> <input type="text" class="info_input" placeholder="Name"
-									required="required"> <input type="text"
-									class="info_input" placeholder="Phone No">
-								<button class="info_form_button">Reservar</button>
-							</form>
+						<div class="info_box" style="margin-top: -9%;">
+							<div class='Chat__holder'style="height: 526px">
+							    <div class='Chat__body'></div>
+							 </div>
 						</div>
 					</div>
+					<!-- FIN CHATBOT -->
 				</div>
 			</div>
 		</div>
-
+		 
+		  
 		<!-- CTA -->
 
 		<div class="cta">
@@ -763,6 +758,20 @@
 		</div>
 		</footer>
 	</div>
+	<!-- INICIO CHATBOT -->
+	<script src="https://assistant-chat-us-south.watsonplatform.net/web/chat/ibm.chat.0.0.4.js"></script>
+	  <script>
+	    const config = {
+	      bot_image: null, // 'http://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-11/256/smiling-face-with-open-mouth.png'
+	      bot_name: '',
+	      debug: true,
+	      element: document.querySelector('.Chat__body'),
+	      integration_id: '01c0c536-bc42-4c18-a3ca-e4f175304ceb',
+	      post_url: 'https://assistant-chat-us-south.watsonplatform.net/public/message/'
+	    };
+	    const chat = new WatsonChat(config);
+	  </script>
+	  <!-- FIN CHATBOT -->
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="styles/bootstrap4/popper.js"></script>
 	<script src="styles/bootstrap4/bootstrap.min.js"></script>

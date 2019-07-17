@@ -9,7 +9,7 @@ public class Conexion {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/clinica",
-					"root", "mysql");
+					"root", "mysqldcv");
 			if(cn != null){
 			
 			}
